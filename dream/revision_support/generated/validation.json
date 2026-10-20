@@ -1,0 +1,732 @@
+{
+  "parameters": {
+    "outer_width": 146.0,
+    "outer_depth": 146.0,
+    "outer_corner_radius": 27.5,
+    "wall": 4.5,
+    "inner_corner_radius": 23.0,
+    "top_outer_y": -17.0,
+    "top_inner_y": -12.5,
+    "seam_top_y": 43.0,
+    "base_front_y": 43.3,
+    "base_back_y": 48.3,
+    "lip_clearance": 0.35,
+    "lip_wall": 2.4,
+    "lip_height": 5.0,
+    "vent_diameter": 3.0,
+    "vent_pitch": 6.5,
+    "M3_insert_OD": 4.72,
+    "M3_insert_length": 3.43,
+    "M3_pocket_diameter": 4.92,
+    "M3_pocket_depth": 3.6,
+    "M2_insert_OD": 3.63,
+    "M2_insert_length": 3.18,
+    "M2_pocket_diameter": 3.83,
+    "M2_pocket_depth": 3.4,
+    "PCB_boss_OD": 10.0,
+    "IPS_boss_OD": 11.0,
+    "COZIR_boss_OD": 11.0,
+    "switch_slot_width": 14.0,
+    "switch_slot_height": 6.0,
+    "usb_housing_width": 18.0,
+    "usb_housing_height": 10.0,
+    "usb_throat_width": 11.0,
+    "usb_throat_height": 5.5,
+    "material": "White Resin V5",
+    "layer_height": 0.1,
+    "insert_installation": "Glue-in after wash and post-cure",
+    "insert_dimensions_confirmed": true,
+    "insert_status": "Dimensions confirmed from user McMaster drawings. Glue-in pockets: 0.20 mm diametral allowance. Validate on cured coupon.",
+    "M3_part": "94459A769",
+    "M2_part": "94459A767"
+  },
+  "mounts": [
+    {
+      "kind": "PCB M3",
+      "point": [
+        -37.0,
+        19,
+        -38.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "PCB M3",
+      "point": [
+        -37.0,
+        19,
+        37.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "PCB M3",
+      "point": [
+        37.0,
+        19,
+        -38.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "PCB M3",
+      "point": [
+        37.0,
+        19,
+        37.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "CozIR shared PCB M3",
+      "point": [
+        -31.82,
+        19,
+        -37.98
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "CozIR shared PCB M3",
+      "point": [
+        -10.0,
+        19,
+        -0.48
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "IPS shared PCB M2",
+      "point": [
+        17.5,
+        19,
+        -30.6
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 11
+    },
+    {
+      "kind": "CozIR external M3",
+      "point": [
+        -53.36402,
+        8.91,
+        -0.54998
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 11
+    },
+    {
+      "kind": "IPS external M2",
+      "point": [
+        58.39945509,
+        7.755895925,
+        6.15
+      ],
+      "axis": [
+        0.00730902327467736,
+        0.9999732887326392,
+        0.0
+      ],
+      "OD": 11
+    }
+  ],
+  "shape_checks": {
+    "TopRevised": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 222579.8677019242,
+      "bbox": [
+        -75.26578550804084,
+        -17.0,
+        -75.26578550804084,
+        75.26578550804084,
+        43.0,
+        75.26578550804084
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 166400
+    },
+    "BaseRevised": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 115378.29024346074,
+      "bbox": [
+        -73.0,
+        7.715696296989274,
+        -73.0,
+        73.0,
+        54.20000000000002,
+        73.0
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 80106
+    },
+    "USBRetainingCollar": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 1186.1305328941532,
+      "bbox": [
+        -39.0,
+        4.0,
+        73.3,
+        -5.0,
+        20.0,
+        75.8
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 1744
+    },
+    "USBClamp": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 843.247568872596,
+      "bbox": [
+        -38.0,
+        20.4,
+        53.0,
+        -6.0,
+        23.4,
+        63.0
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 916
+    },
+    "CozirSpacer1": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 197.3769987267185,
+      "bbox": [
+        -35.07,
+        8.91,
+        -41.23,
+        -28.57,
+        17.49,
+        -34.73
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 840
+    },
+    "CozirSpacer2": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 197.37699872671857,
+      "bbox": [
+        -13.25,
+        8.91,
+        -3.73,
+        -6.75,
+        17.49,
+        2.77
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 840
+    },
+    "IPSSpacer": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 252.48980156901166,
+      "bbox": [
+        14.3,
+        8.09,
+        -33.800000000000004,
+        20.7,
+        17.49,
+        -27.400000000000002
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 840
+    }
+  },
+  "insert_basis": "User-supplied McMaster drawings: M3 94459A769 OD4.72 x L3.43, M2 94459A767 OD3.63 x L3.18. Glue-in pockets with 0.20 diametral allowance; original mislabeled insert references superseded.",
+  "usb_fit": "Provisional 18 x 10 mm housing pocket, 11 x 5.5 mm collar throat, removable slotted clamp. Connector dimensions were not supplied.",
+  "assembly_bbox": [
+    -56.91401977966475,
+    -8.08999999999403,
+    -41.44999999999102,
+    61.99309548530492,
+    37.34168720413841,
+    51.000000000001656
+  ],
+  "flat_side_clearances": {
+    "left": 11.585980220335252,
+    "right": 6.50690451469508,
+    "front": 27.05000000000898,
+    "rear": 17.499999999998344
+  },
+  "minimum_side_clearance_conservative": 6.50690451469508,
+  "limiting_component": "ips7101",
+  "pair_checks": {
+    "TopRevised_Base_common_volume": 0.0,
+    "USBRetainingCollar_Base_common_volume": 0.0,
+    "USBClamp_Base_common_volume": 0.0
+  },
+  "collisions": [],
+  "electronics_checked": 715,
+  "source_invalid_solids": [
+    "Part__Feature4801"
+  ],
+  "retained_reference_collisions": [],
+  "final_file": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV3-enclosure.FCStd",
+  "final_roots": [
+    "Top",
+    "Bottom",
+    "MintsIcon",
+    "DreamV3"
+  ],
+  "final_file_reopened": true,
+  "mesh_checks": {
+    "TopRevised": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 166400,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          2.2657854557037354,
+          2.2657854557037354,
+          3.552713678800501e-15
+        ],
+        [
+          148.2657928466797,
+          148.2657928466797,
+          60.0
+        ]
+      ],
+      "sha256": "84714a39d04f0fa6c52a48da7b4e2b0883c0f9360b962ac6ef4395b58f591eff"
+    },
+    "BaseRevised": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 80106,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          146.0,
+          146.0,
+          46.48429870605469
+        ]
+      ],
+      "sha256": "b12df3fa681734f07a6333d60f5b287ebe1ae32d5acb9e88d3540a4cccffab43"
+    },
+    "USBRetainingCollar": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 1744,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          34.0,
+          16.0,
+          2.5
+        ]
+      ],
+      "sha256": "f4de6d3e1aa7fdaed76c13ae82595421b125fd46bc40854030f1d0aadbabb530"
+    },
+    "USBClamp": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 916,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          32.0,
+          10.0,
+          3.0
+        ]
+      ],
+      "sha256": "877a8001a695df12c257125d49c1e0d113c83e4589f245f0bc486f1f6c285be8"
+    },
+    "CozirSpacer1": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 840,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0003636691253632307,
+          0.0,
+          -3.552713678800501e-15
+        ],
+        [
+          6.499636173248291,
+          6.498545169830322,
+          8.579999923706055
+        ]
+      ],
+      "sha256": "b0d1f768033c7a785c2eb96c75ac1731858bf4e85343cf2ed4cb2117f896117e"
+    },
+    "CozirSpacer2": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 840,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0003636691253632307,
+          4.440892098500626e-16,
+          0.0
+        ],
+        [
+          6.499636173248291,
+          6.498545169830322,
+          8.579999923706055
+        ]
+      ],
+      "sha256": "31aea3ddf69c42bbb12d6f3834fb9aa956792aa0af9b7f31c9af57f49cd5c180"
+    },
+    "IPSSpacer": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 840,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0003580742049962282,
+          0.0,
+          0.0
+        ],
+        [
+          6.399641990661621,
+          6.3985676765441895,
+          9.399999618530273
+        ]
+      ],
+      "sha256": "5baa86eb89cb1a5ff6493193f0e1f092135f0661fa897002797690c3b0f12f1f"
+    },
+    "MintsIcon": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 121818,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          25.639999389648438,
+          19.218000411987305,
+          4.899999618530273
+        ]
+      ],
+      "sha256": "5161991d38fce24218cdaa2fb13dd6e3270e039257d7fac7d6dff560d7a1024c"
+    },
+    "InsertFitCoupon": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 14380,
+      "edge_defects": 0,
+      "bbox": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          64.0,
+          28.0,
+          8.0
+        ]
+      ],
+      "sha256": "15c2e20b40af023c43f2efee645ea9cc91f7407ac3f87fd119afc0f0716e8d13"
+    }
+  },
+  "mesh_cleanup": {
+    "part": "BaseRevised",
+    "solid": true,
+    "nonmanifold": false,
+    "facets": 80106,
+    "edge_defects": 0,
+    "vertex_rounding_mm": 1e-05
+  },
+  "insert_pocket_checks": [
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -37.0,
+        19.0,
+        -38.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -37.0,
+        19.0,
+        37.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        37.0,
+        19.0,
+        -38.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        37.0,
+        19.0,
+        37.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -31.82,
+        19.0,
+        -37.98
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -10.0,
+        19.0,
+        -0.48
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M2",
+      "point": [
+        17.5,
+        19.0,
+        -30.6
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 3.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -53.36402,
+        8.91,
+        -0.54998
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M2",
+      "point": [
+        58.39945509,
+        7.755895925,
+        6.15
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 3.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        -56.0,
+        43.0,
+        -56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        -56.0,
+        43.0,
+        56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        56.0,
+        43.0,
+        -56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        56.0,
+        43.0,
+        56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 3.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -34.5,
+        20.0,
+        58.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 3.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -9.5,
+        20.0,
+        58.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 3.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -35.0,
+        12.0,
+        73.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 3.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -9.0,
+        12.0,
+        73.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 3.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0
+    }
+  ],
+  "visual_review": {
+    "method": "Orthographic z-buffer rendering from saved CAD triangle geometry",
+    "preview": "dreamV3-enclosure-preview.png",
+    "inspected": true,
+    "freecad_gui": "Blocked by repeated FreeCAD 1.1.1 macOS QMacAccessibilityElement crashes during opening; native document reopen passed."
+  }
+}

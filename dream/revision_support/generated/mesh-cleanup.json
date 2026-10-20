@@ -1,0 +1,8 @@
+{
+  "part": "BaseRevised",
+  "solid": true,
+  "nonmanifold": false,
+  "facets": 80106,
+  "edge_defects": 0,
+  "vertex_rounding_mm": 1e-05
+}

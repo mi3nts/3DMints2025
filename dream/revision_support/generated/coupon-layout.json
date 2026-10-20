@@ -1,0 +1,44 @@
+[
+  {
+    "insert": "M3",
+    "x": 12,
+    "y": 8,
+    "diameter": 4.82,
+    "depth": 3.6
+  },
+  {
+    "insert": "M3",
+    "x": 32,
+    "y": 8,
+    "diameter": 4.92,
+    "depth": 3.6
+  },
+  {
+    "insert": "M3",
+    "x": 52,
+    "y": 8,
+    "diameter": 5.02,
+    "depth": 3.6
+  },
+  {
+    "insert": "M2",
+    "x": 12,
+    "y": 20,
+    "diameter": 3.73,
+    "depth": 3.4
+  },
+  {
+    "insert": "M2",
+    "x": 32,
+    "y": 20,
+    "diameter": 3.83,
+    "depth": 3.4
+  },
+  {
+    "insert": "M2",
+    "x": 52,
+    "y": 20,
+    "diameter": 3.93,
+    "depth": 3.4
+  }
+]

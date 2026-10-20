@@ -1,0 +1,18 @@
+BaseRevised M3 [-37.0, 19.0, -38.0] clear / depth stop present
+BaseRevised M3 [-37.0, 19.0, 37.0] clear / depth stop present
+BaseRevised M3 [37.0, 19.0, -38.0] clear / depth stop present
+BaseRevised M3 [37.0, 19.0, 37.0] clear / depth stop present
+BaseRevised M3 [-31.82, 19.0, -37.98] clear / depth stop present
+BaseRevised M3 [-10.0, 19.0, -0.48] clear / depth stop present
+BaseRevised M2 [17.5, 19.0, -30.6] clear / depth stop present
+BaseRevised M3 [-53.36402, 8.91, -0.54998] clear / depth stop present
+BaseRevised M2 [58.39945509, 7.755895925, 6.15] clear / depth stop present
+TopRevised M3 [-56.0, 43.0, -56.0] clear / depth stop present
+TopRevised M3 [-56.0, 43.0, 56.0] clear / depth stop present
+TopRevised M3 [56.0, 43.0, -56.0] clear / depth stop present
+TopRevised M3 [56.0, 43.0, 56.0] clear / depth stop present
+TopRevised M2 [-34.5, 20.0, 58.0] clear / depth stop present
+TopRevised M2 [-9.5, 20.0, 58.0] clear / depth stop present
+TopRevised M2 [-35.0, 12.0, 73.0] clear / depth stop present
+TopRevised M2 [-9.0, 12.0, 73.0] clear / depth stop present
+Verified 17 pockets and exported preview geometry

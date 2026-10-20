@@ -1,0 +1,28 @@
+Checking 715 electronic leaf parts
+TopRevised checked
+BaseRevised checked
+USBRetainingCollar checked
+USBClamp checked
+CozirSpacer1 checked
+CozirSpacer2 checked
+IPSSpacer checked
+{
+  "flat_side_clearances": {
+    "left": 11.585980220335252,
+    "right": 6.50690451469508,
+    "front": 27.05000000000898,
+    "rear": 17.499999999998344
+  },
+  "minimum_side_clearance_conservative": 6.50690451469508,
+  "limiting_component": "ips7101",
+  "pair_checks": {
+    "TopRevised_Base_common_volume": 0.0,
+    "USBRetainingCollar_Base_common_volume": 0.0,
+    "USBClamp_Base_common_volume": 0.0
+  },
+  "collisions": [],
+  "retained_reference_collisions": [],
+  "source_invalid_solids": [
+    "Part__Feature4801"
+  ]
+}

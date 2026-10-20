@@ -1,0 +1,65 @@
+{
+  "saved": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV3-enclosure.FCStd",
+  "roots": [
+    "Top",
+    "Bottom",
+    "MintsIcon",
+    "DreamV3"
+  ],
+  "meshes": {
+    "TopRevised": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 166400,
+      "edge_defects": 0
+    },
+    "BaseRevised": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 80106,
+      "edge_defects": 0
+    },
+    "USBRetainingCollar": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 1744,
+      "edge_defects": 0
+    },
+    "USBClamp": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 916,
+      "edge_defects": 0
+    },
+    "CozirSpacer1": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 840,
+      "edge_defects": 0
+    },
+    "CozirSpacer2": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 840,
+      "edge_defects": 0
+    },
+    "IPSSpacer": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 840,
+      "edge_defects": 0
+    },
+    "MintsIcon": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 121818,
+      "edge_defects": 0
+    },
+    "InsertFitCoupon": {
+      "solid": true,
+      "nonmanifold": false,
+      "facets": 14380,
+      "edge_defects": 0
+    }
+  }
+}

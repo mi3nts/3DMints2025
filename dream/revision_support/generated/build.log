@@ -1,0 +1,11 @@
+Building enlarged rounded shell
+Rebuilding vent pattern
+Building enlarged base and keeping battery/power-module compartment
+TopRevised {'valid': True, 'closed': True, 'solids': 1, 'volume': 222579.8677019242, 'bbox': [-75.26578550804084, -17.0, -75.26578550804084, 75.26578550804084, 43.0, 75.26578550804084]}
+BaseRevised {'valid': True, 'closed': True, 'solids': 1, 'volume': 115378.29024346074, 'bbox': [-73.0, 7.715696296989274, -73.0, 73.0, 54.20000000000002, 73.0]}
+USBRetainingCollar {'valid': True, 'closed': True, 'solids': 1, 'volume': 1186.1305328941532, 'bbox': [-39.0, 4.0, 73.3, -5.0, 20.0, 75.8]}
+USBClamp {'valid': True, 'closed': True, 'solids': 1, 'volume': 843.247568872596, 'bbox': [-38.0, 20.4, 53.0, -6.0, 23.4, 63.0]}
+CozirSpacer1 {'valid': True, 'closed': True, 'solids': 1, 'volume': 197.3769987267185, 'bbox': [-35.07, 8.91, -41.23, -28.57, 17.49, -34.73]}
+CozirSpacer2 {'valid': True, 'closed': True, 'solids': 1, 'volume': 197.37699872671857, 'bbox': [-13.25, 8.91, -3.73, -6.75, 17.49, 2.77]}
+IPSSpacer {'valid': True, 'closed': True, 'solids': 1, 'volume': 252.48980156901166, 'bbox': [14.3, 8.09, -33.800000000000004, 20.7, 17.49, -27.400000000000002]}
+Finished geometry build

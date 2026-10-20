@@ -1,0 +1,1 @@
+These are superseded intermediate review files. Use ../../dreamV3-enclosure.FCStd and ../../dreamV3-enclosure-notes.md. The archived scripts and draft meshes are not the current regeneration workflow.
