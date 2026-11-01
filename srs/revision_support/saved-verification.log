@@ -1,0 +1,17 @@
+Changed original shape payloads 2 ['Compound', 'Part__Feature4801'] checked 4644
+{
+  "file_reopened": true,
+  "source_shape_payloads_checked": 4644,
+  "changed_source_shape_payloads": [
+    "Compound",
+    "Part__Feature4801"
+  ],
+  "base_valid_closed_single_solid": true,
+  "shell_valid_closed_single_solid": true,
+  "ips_max_vertex_error": 6.217248937900877e-14,
+  "meshes": {
+    "srsv4-SRS_Base_Fillet-DreamV3": {
+      "exported": false
+    }
+  }
+}

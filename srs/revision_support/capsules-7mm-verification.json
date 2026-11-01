@@ -1,0 +1,33 @@
+{
+  "capsule_dimensions_mm": [
+    [
+      3.25,
+      7.0
+    ],
+    [
+      3.25,
+      7.0
+    ],
+    [
+      3.25,
+      7.0
+    ],
+    [
+      3.25,
+      7.0
+    ]
+  ],
+  "shell_valid_closed_single_solid": true,
+  "material_added_mm3": 0.0,
+  "material_removed_this_update_mm3": 91.95185143162504,
+  "change_outside_capsules_mm3": 0.0,
+  "source_sha256": "37f7701fd38ba20425162d4330c709f19bb46f1373f9ae74fb46b73d0dacdec1",
+  "changed_archive_entries": [
+    "Document.xml",
+    "Compound.Shape.brp",
+    "M3MountSlotTool.Shape.brp",
+    "SRSMountSlots.Shape.brp"
+  ],
+  "saved_file_reopened": true,
+  "removed_volume_from_original_circular_holes_mm3": 126.17405577306636
+}

@@ -1,0 +1,132 @@
+{
+  "base": {
+    "valid": true,
+    "solids": 1,
+    "volume": 116896.51958725603,
+    "added_volume": 3213.8703407391217,
+    "removed_volume": 127.60995011272348,
+    "outside_column_regions_added": 0.0,
+    "outside_column_regions_removed": 0.0
+  },
+  "shell": {
+    "valid": true,
+    "solid_count": 1,
+    "removed_volume": 126.17405577306636,
+    "added_volume": 0.0,
+    "change_outside_slots": 0.0,
+    "slot_width": 3.25,
+    "slot_length": 7.0,
+    "travel_total": 3.75
+  },
+  "hole_centres_local": [
+    [
+      -54.717127501163105,
+      -23.627017935407068,
+      1.625
+    ],
+    [
+      18.877492756089104,
+      -31.36212421721342,
+      1.625
+    ],
+    [
+      -46.877492756089104,
+      50.96212421721342,
+      1.625
+    ],
+    [
+      26.717127501163112,
+      43.22701793540707,
+      1.625
+    ],
+    [
+      -49.563413513890104,
+      -24.148584937226147,
+      1.75
+    ]
+  ],
+  "hole_clearance": [
+    {
+      "x": -54.717127501163105,
+      "y": -23.627017935407068,
+      "diameter": 3.25,
+      "obstruction_volume": 0.0
+    },
+    {
+      "x": 18.877492756089104,
+      "y": -31.36212421721342,
+      "diameter": 3.25,
+      "obstruction_volume": 0.0
+    },
+    {
+      "x": -46.877492756089104,
+      "y": 50.96212421721342,
+      "diameter": 3.25,
+      "obstruction_volume": 0.0
+    },
+    {
+      "x": 26.717127501163112,
+      "y": 43.22701793540707,
+      "diameter": 3.25,
+      "obstruction_volume": 0.0
+    },
+    {
+      "x": -49.563413513890104,
+      "y": -24.148584937226147,
+      "diameter": 3.5,
+      "obstruction_volume": 0.0
+    }
+  ],
+  "ips": {
+    "max_vertex_error": 3.6404482152219934e-14,
+    "old_bbox": [
+      -3.401160026212428,
+      -31.012018930917947,
+      92.04444078305204,
+      55.718563096437585,
+      29.5811152513844,
+      105.96388638492003
+    ],
+    "new_bbox": [
+      -3.3979597007769087,
+      -31.00759447266137,
+      92.08137337537104,
+      55.7049681143138,
+      29.55928384359827,
+      105.96386808770002
+    ]
+  },
+  "base_shell_overlap_original": 453.3278038452816,
+  "base_shell_new_interference": 0.0,
+  "pcb_screw_shaft_housing_intersections": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "electronics_checked": 715,
+  "exact_intersection_operations": 79,
+  "invalid_source_electronics": [
+    "Part__Feature4801"
+  ],
+  "collisions": [],
+  "board_offset_local": {
+    "horizontal": -4.0,
+    "vertical": -0.2,
+    "inward": 6.5,
+    "in_plane_rotation_deg": -6.0,
+    "rotation_centre": [
+      -10,
+      10,
+      0
+    ]
+  },
+  "separate_ips_electronics_intersections": [],
+  "separate_ips_intersection_operations": 0,
+  "print_meshes": {},
+  "housing_stl_status": "Not exported: unchanged source Fillet296 (T-slot) is invalid; full housing mesh is nonmanifold. Source geometry preserved.",
+  "base_stl_status": "Not exported: standard tessellation left a root gap; attempted mesh repairs did not meet the 0.05 mm sampled surface-distance acceptance criterion. CAD remains a verified valid closed solid.",
+  "base_shell_overlap_upper_bound_after_slot_extension": 449.92339054035006,
+  "capsule_extension_verification": "capsules-7mm-verification.json"
+}
