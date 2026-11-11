@@ -14,7 +14,13 @@ TARGET = os.path.join(ROOT, 'dreamV3-enclosure.FCStd')
 P = json.load(open(os.path.join(ROOT, 'revision_support', 'parameters.json')))
 report = json.load(open(os.path.join(OUT, 'validation.json')))
 assert P['insert_dimensions_confirmed']
-assert report['electronics_checked'] == 715 and not report['collisions']
+assert report['electronics_checked'] == 715
+# User confirmed that the physical Orange Pi is higher than the source reference.
+# Permit only this measured, documented reference collision for this exact slot.
+reference_exception = P.get('orange_pi_physical_position_confirmed', False) and P.get('orange_pi_relief_center_y') == 29.1 and P.get('orange_pi_relief_height') == 5.0
+assert all(reference_exception and c.get('enclosure') == 'BaseRevised' and c.get('component') == 'Part__Feature4149' and 0 < c.get('volume', 0) < 14.063 for c in report['collisions']), report['collisions']
+report['parameters'] = P
+report['reference_position_confirmation'] = P.get('orange_pi_confirmation', '')
 assert not report['retained_reference_collisions']
 assert report['minimum_side_clearance_conservative'] >= 5
 assert all(v < .001 for v in report['pair_checks'].values())
@@ -45,6 +51,8 @@ meta(top, 'USBFit', 'Provisional adjustable cradle: 18 x 10 mm housing, 11 x 5.5
 meta(top, 'LogoSeat', 'Original logo location. Face 0.9 mm proud. Stepped flange recess, 0.15 mm profile allowance.')
 meta(bottom, 'PairedMount', 'Adjacent front-left PCB and CozIR inserts share a reinforced boss and small epoxy reservoir.')
 meta(bottom, 'MinimumSideClearance', report['minimum_side_clearance_conservative'], 'App::PropertyLength')
+meta(bottom, 'OrangePiSlot', 'User-confirmed: Y26.6..31.6, 5 mm tall; lower face 1 mm above original upper face. Physical Orange Pi is higher than the stored reference.')
+meta(bottom, 'NotchedInsertPocket', 'The 5 mm slit leaves the full M3 insert pocket and depth-stop ring intact. M3 pocket depth remains4.6mm; slit begins3mm below its nominal pocket bottom.')
 
 labels = {
     'TopRevised': 'Top — shell, vents, logo seat and rear ports',
@@ -83,7 +91,7 @@ meta(logo, 'Protrusion', .9, 'App::PropertyLength')
 electronics = R.addObject('App::DocumentObjectGroup', 'DreamV3')
 electronics.Label = 'Dream V3'
 meta(electronics, 'Source', 'DreamV3 1 from dreamV2.FCStd; global component placements preserved')
-meta(electronics, 'FitCheck', '715 positive-volume source parts: no detected enclosure intersections; conservative minimum side clearance 6.5069 mm.')
+meta(electronics, 'FitCheck', '715 source parts checked. One documented collision with the old Orange Pi PCB reference (14.062 mm^3); user confirmed the physical board sits higher. No other electronics intersections. Conservative side clearance 6.5069 mm.')
 meta(electronics, 'SourceLimitation', 'Imported ips7101 / Part__Feature4801 has a pre-existing invalid solid; physical fit remains to be checked.')
 
 source_map = {}

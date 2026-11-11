@@ -1,0 +1,565 @@
+{
+  "parameters": {
+    "outer_width": 146.0,
+    "outer_depth": 146.0,
+    "outer_corner_radius": 27.5,
+    "wall": 4.5,
+    "inner_corner_radius": 23.0,
+    "top_outer_y": -17.0,
+    "top_inner_y": -12.5,
+    "seam_top_y": 43.0,
+    "base_front_y": 43.3,
+    "base_back_y": 48.3,
+    "lip_clearance": 0.35,
+    "lip_wall": 2.4,
+    "lip_height": 5.0,
+    "vent_diameter": 3.0,
+    "vent_pitch": 6.5,
+    "M3_insert_OD": 4.72,
+    "M3_insert_length": 3.43,
+    "M3_pocket_diameter": 4.92,
+    "M3_pocket_depth": 4.6,
+    "M2_insert_OD": 3.63,
+    "M2_insert_length": 3.18,
+    "M2_pocket_diameter": 3.83,
+    "M2_pocket_depth": 4.4,
+    "PCB_boss_OD": 10.0,
+    "IPS_boss_OD": 11.0,
+    "COZIR_boss_OD": 11.0,
+    "switch_slot_width": 14.0,
+    "switch_slot_height": 6.0,
+    "usb_housing_width": 18.0,
+    "usb_housing_height": 10.0,
+    "usb_throat_width": 11.0,
+    "usb_throat_height": 5.5,
+    "material": "White Resin V5",
+    "layer_height": 0.1,
+    "insert_installation": "Glue-in after wash and post-cure",
+    "insert_dimensions_confirmed": true,
+    "insert_status": "Dimensions confirmed from user McMaster drawings. Glue-in pockets: 0.20 mm diametral allowance. Validate on cured coupon.",
+    "M3_part": "94459A769",
+    "M2_part": "94459A767",
+    "orange_pi_relief_center_y": 27.25,
+    "orange_pi_relief_height": 8.7,
+    "orange_pi_relief_radius": 0.7
+  },
+  "mounts": [
+    {
+      "kind": "PCB M3",
+      "point": [
+        -37.0,
+        19,
+        -38.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "PCB M3",
+      "point": [
+        -37.0,
+        19,
+        37.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "PCB M3",
+      "point": [
+        37.0,
+        19,
+        -38.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "PCB M3",
+      "point": [
+        37.0,
+        19,
+        37.0
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "CozIR shared PCB M3",
+      "point": [
+        -31.82,
+        19,
+        -37.98
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "CozIR shared PCB M3",
+      "point": [
+        -10.0,
+        19,
+        -0.48
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 10
+    },
+    {
+      "kind": "IPS shared PCB M2",
+      "point": [
+        17.5,
+        19,
+        -30.6
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 11
+    },
+    {
+      "kind": "CozIR external M3",
+      "point": [
+        -53.36402,
+        8.91,
+        -0.54998
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "OD": 11
+    },
+    {
+      "kind": "IPS external M2",
+      "point": [
+        58.39945509,
+        7.755895925,
+        6.15
+      ],
+      "axis": [
+        0.00730902327467736,
+        0.9999732887326392,
+        0.0
+      ],
+      "OD": 11
+    }
+  ],
+  "shape_checks": {
+    "TopRevised": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 222505.11256225462,
+      "bbox": [
+        -75.26578550804084,
+        -17.0,
+        -75.26578550804084,
+        75.26578550804084,
+        43.0,
+        75.26578550804084
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 166400
+    },
+    "BaseRevised": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 115178.16450989817,
+      "bbox": [
+        -73.0,
+        7.715696296989274,
+        -73.0,
+        73.0,
+        54.20000000000002,
+        73.0
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 80232
+    },
+    "USBRetainingCollar": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 1186.1305328941532,
+      "bbox": [
+        -39.0,
+        4.0,
+        73.3,
+        -5.0,
+        20.0,
+        75.8
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 1744
+    },
+    "USBClamp": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 843.247568872596,
+      "bbox": [
+        -38.0,
+        20.4,
+        53.0,
+        -6.0,
+        23.4,
+        63.0
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 916
+    },
+    "CozirSpacer1": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 197.3769987267185,
+      "bbox": [
+        -35.07,
+        8.91,
+        -41.23,
+        -28.57,
+        17.49,
+        -34.73
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 840
+    },
+    "CozirSpacer2": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 197.37699872671857,
+      "bbox": [
+        -13.25,
+        8.91,
+        -3.73,
+        -6.75,
+        17.49,
+        2.77
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 840
+    },
+    "IPSSpacer": {
+      "valid": true,
+      "closed": true,
+      "solids": 1,
+      "volume": 252.48980156901166,
+      "bbox": [
+        14.3,
+        8.09,
+        -33.800000000000004,
+        20.7,
+        17.49,
+        -27.400000000000002
+      ],
+      "mesh_solid": true,
+      "mesh_facets": 840
+    }
+  },
+  "insert_basis": "User-supplied McMaster drawings: M3 94459A769 OD4.72 x L3.43, M2 94459A767 OD3.63 x L3.18. Glue-in pockets with 0.20 diametral allowance; original mislabeled insert references superseded.",
+  "usb_fit": "Provisional 18 x 10 mm housing pocket, 11 x 5.5 mm collar throat, removable slotted clamp. Connector dimensions were not supplied.",
+  "assembly_bbox": [
+    -56.91401977966475,
+    -8.08999999999403,
+    -41.44999999999102,
+    61.99309548530492,
+    37.34168720413841,
+    51.000000000001656
+  ],
+  "flat_side_clearances": {
+    "left": 11.585980220335252,
+    "right": 6.50690451469508,
+    "front": 27.05000000000898,
+    "rear": 17.499999999998344
+  },
+  "minimum_side_clearance_conservative": 6.50690451469508,
+  "limiting_component": "ips7101",
+  "pair_checks": {
+    "TopRevised_Base_common_volume": 0.0,
+    "USBRetainingCollar_Base_common_volume": 0.0,
+    "USBClamp_Base_common_volume": 0.0
+  },
+  "collisions": [
+    {
+      "enclosure": "BaseRevised",
+      "component": "Part__Feature4149",
+      "label": "\\X2\\0414043504420430043B044C\\X0\\",
+      "volume": 14.062165070485783
+    }
+  ],
+  "electronics_checked": 715,
+  "source_invalid_solids": [
+    "Part__Feature4801"
+  ],
+  "retained_reference_collisions": [],
+  "insert_pocket_checks": [
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -37.0,
+        19.0,
+        -38.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -37.0,
+        19.0,
+        37.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        37.0,
+        19.0,
+        -38.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        37.0,
+        19.0,
+        37.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 0.8537859548451691,
+      "complete_depth_stop": false,
+      "limitation": "Lower pocket extension opens into the user-requested raised slit; partial depth stop."
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -31.82,
+        19.0,
+        -37.98
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -10.0,
+        19.0,
+        -0.48
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M2",
+      "point": [
+        17.5,
+        19.0,
+        -30.6
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 4.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M3",
+      "point": [
+        -53.36402,
+        8.91,
+        -0.54998
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "BaseRevised",
+      "insert": "M2",
+      "point": [
+        58.39945509,
+        7.755895925,
+        6.15
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 4.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        -56.0,
+        43.0,
+        -56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        -56.0,
+        43.0,
+        56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        56.0,
+        43.0,
+        -56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M3",
+      "point": [
+        56.0,
+        43.0,
+        56.0
+      ],
+      "diameter": 4.92,
+      "nominal_depth": 4.6,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -34.5,
+        20.0,
+        58.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 4.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -9.5,
+        20.0,
+        58.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 4.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -35.0,
+        12.0,
+        73.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 4.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    },
+    {
+      "object": "TopRevised",
+      "insert": "M2",
+      "point": [
+        -9.0,
+        12.0,
+        73.0
+      ],
+      "diameter": 3.83,
+      "nominal_depth": 4.4,
+      "pocket_intrusion_mm3": 0.0,
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
+    }
+  ]
+}

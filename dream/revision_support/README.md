@@ -18,3 +18,7 @@ Run them in order from this directory. `check_enclosure.py` examines the actual 
 `clean_mesh.py` records the initial bottom-STL cleanup: rounding tessellated vertices to 0.00001 mm and removing collapsed facets. This cleanup is now included in `build_enclosure.py` when needed.
 
 The custom Design properties in the saved FreeCAD groups are descriptive. To regenerate a different insert fit, edit the M3/M2 pocket dimensions in `parameters.json`. Other structural changes may require editing the generator. Do not use the archived scripts or models in `superseded/` or the obsolete `draft_meshes/` files.
+
+The November 10 slit revision is user-confirmed. The saved source Orange Pi reference stays at its original height, while the physical board is higher. The generator allows only this specifically documented reference collision for the approved slit geometry. The final slit is5mm tall (Y26.6..31.6). The notched corner pocket now has a complete depth-stop ring; verification requires complete rings at all17 pockets.
+
+For the dimensioned post comparison, run `export_slot_section.py` with FreeCAD Python, then `render_slot_section.py` with a Python environment containing Pillow. The original3.7mm baseline is retained in the first slit-revision backup.

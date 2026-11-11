@@ -10,8 +10,8 @@ Use **glued inserts in washed, fully post-cured White Resin V5**, as agreed. Do 
 
 | Insert | Confirmed maximum outside diameter × length | Enclosure pocket diameter × nominal depth |
 |---|---:|---:|
-| M3 × 0.5, [McMaster 94459A769](https://www.mcmaster.com/94459A769/) | 4.72 × 3.43 mm | **4.92 × 3.60 mm** |
-| M2 × 0.4, [McMaster 94459A767](https://www.mcmaster.com/94459A767/) | 3.63 × 3.18 mm | **3.83 × 3.40 mm** |
+| M3 × 0.5, [McMaster 94459A769](https://www.mcmaster.com/94459A769/) | 4.72 × 3.43 mm | **4.92 × 4.60 mm** |
+| M2 × 0.4, [McMaster 94459A767](https://www.mcmaster.com/94459A767/) | 3.63 × 3.18 mm | **3.83 × 4.40 mm** |
 
 Dimensions are taken from the user-provided McMaster drawings. These pockets allow 0.20 mm diametral / 0.10 mm radial clearance for adhesive. They have a 0.3 mm entry chamfer and narrower screw-tip relief. The catalog's 4.0 mm and 3.2 mm heat-setting holes are not used for this glue-in SLA design.
 
@@ -31,6 +31,12 @@ Viewed from the pocket side, place the clipped corner at the lower left:
 | Lower, larger M3 pockets | Ø4.82 mm | **Ø4.92 mm** | Ø5.02 mm |
 
 The coupon is 64 × 28 × 8 mm; depths match the enclosure. Inserts should enter without forcing and leave room for the selected adhesive. If the middle pockets are unsuitable after curing, adjust the pocket parameters before printing the enclosure.
+
+## November 10, 2026 — Orange Pi slit revision
+
+The slit is on the rear-right M3 PCB post at X = 37, Z = 37. Negative Y runs upward along the column toward its tip. The old slit occupied Y = 32.6–36.3 mm; the revised slit occupies Y = 26.6–31.6 mm. Its lower face is therefore 1 mm above the old upper face, and its vertical opening is **5 mm** (reduced from the previous 8.7 mm revision). The rounded edges are retained.
+
+All M3 and M2 insert pockets are 1 mm deeper, including those in the top cover and USB cradle. Both shell STLs and the fit coupon have been updated. Keep the specified inserts flush with their seating faces; do not sink them to the deeper pocket floors. The shortened slit restores a complete depth-stop ring at the corner M3 pocket; the slit starts 3 mm below the nominal insert pocket bottom. The user confirmed the physical board is higher than the unchanged source CAD reference, so that known reference collision remains documented.
 
 ## Structure and clearances
 
@@ -61,9 +67,9 @@ The original mesh had microscopic duplicate/collapsed triangles. These were weld
 
 The final FreeCAD file was reopened successfully by FreeCAD's native geometry engine. All seven revised mechanical parts are valid, closed, single solids. All nine exported STLs, including the logo and coupon, are watertight with zero nonmanifold or boundary edges.
 
-All 17 insert cavities were probed in the saved CAD for the intended clear diameter/depth and a remaining depth-stop ring. Each passed. `dreamV3-enclosure-preview.png` was rendered from the saved CAD geometry and visually inspected. FreeCAD 1.1.1's desktop interface repeatedly crashed in macOS Qt accessibility handling during opening, so an interactive GUI review could not be completed.
+All 17 insert cavities were probed for the intended clear diameter and depth. All 17 have complete depth-stop rings, including the revised corner M3 pocket. The insert pocket diameters and depths remain unchanged from the previous revision. `dreamV3-enclosure-preview.png` was rendered from the saved CAD geometry and visually inspected. FreeCAD 1.1.1's desktop interface repeatedly crashed in macOS Qt accessibility handling during opening, so an interactive GUI review could not be completed.
 
-All 715 positive-volume electronic source parts were checked against the seven enclosure/fitting solids: no volumetric intersections were detected. The top and bottom do not overlap. Retained battery/power-board references also have no detected enclosure intersections.
+All 715 positive-volume electronic source parts were checked against the seven enclosure/fitting solids. The only detected electronics intersection is 14.062 mm³ between the revised base and the old Orange Pi PCB reference. On November 10, 2026, the user confirmed that the physical Orange Pi sits higher and requested keeping this slit exactly as specified. The reference assembly has not been repositioned without measured offsets. The top and bottom do not overlap. Retained battery/power-board references also have no detected enclosure intersections.
 
 The imported `ips7101` source (`Part__Feature4801`) has a pre-existing invalid solid. Its conservative bounding envelope was included, but its collision result is less reliable than those of valid solids; verify the physical sensor fit.
 

@@ -18,11 +18,11 @@
     "M3_insert_OD": 4.72,
     "M3_insert_length": 3.43,
     "M3_pocket_diameter": 4.92,
-    "M3_pocket_depth": 3.6,
+    "M3_pocket_depth": 4.6,
     "M2_insert_OD": 3.63,
     "M2_insert_length": 3.18,
     "M2_pocket_diameter": 3.83,
-    "M2_pocket_depth": 3.4,
+    "M2_pocket_depth": 4.4,
     "PCB_boss_OD": 10.0,
     "IPS_boss_OD": 11.0,
     "COZIR_boss_OD": 11.0,
@@ -38,7 +38,12 @@
     "insert_dimensions_confirmed": true,
     "insert_status": "Dimensions confirmed from user McMaster drawings. Glue-in pockets: 0.20 mm diametral allowance. Validate on cured coupon.",
     "M3_part": "94459A769",
-    "M2_part": "94459A767"
+    "M2_part": "94459A767",
+    "orange_pi_relief_center_y": 29.1,
+    "orange_pi_relief_height": 5.0,
+    "orange_pi_relief_radius": 0.7,
+    "orange_pi_physical_position_confirmed": true,
+    "orange_pi_confirmation": "2026-11-10: user confirms physical Orange Pi is higher; slit height subsequently revised to5mm, retaining lower faceY31.6."
   },
   "mounts": [
     {
@@ -173,7 +178,7 @@
       "valid": true,
       "closed": true,
       "solids": 1,
-      "volume": 222579.8677019242,
+      "volume": 222505.11256225462,
       "bbox": [
         -75.26578550804084,
         -17.0,
@@ -189,7 +194,7 @@
       "valid": true,
       "closed": true,
       "solids": 1,
-      "volume": 115378.29024346074,
+      "volume": 115257.62455349186,
       "bbox": [
         -73.0,
         7.715696296989274,
@@ -305,12 +310,20 @@
     "USBRetainingCollar_Base_common_volume": 0.0,
     "USBClamp_Base_common_volume": 0.0
   },
-  "collisions": [],
+  "collisions": [
+    {
+      "enclosure": "BaseRevised",
+      "component": "Part__Feature4149",
+      "label": "\\X2\\0414043504420430043B044C\\X0\\",
+      "volume": 14.062165070485783
+    }
+  ],
   "electronics_checked": 715,
   "source_invalid_solids": [
     "Part__Feature4801"
   ],
   "retained_reference_collisions": [],
+  "reference_position_confirmation": "2026-11-10: user confirms physical Orange Pi is higher; slit height subsequently revised to5mm, retaining lower faceY31.6.",
   "final_file": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV3-enclosure.FCStd",
   "final_roots": [
     "Top",
@@ -325,56 +338,20 @@
       "nonmanifold": false,
       "facets": 166400,
       "edge_defects": 0,
-      "bbox": [
-        [
-          2.2657854557037354,
-          2.2657854557037354,
-          3.552713678800501e-15
-        ],
-        [
-          148.2657928466797,
-          148.2657928466797,
-          60.0
-        ]
-      ],
-      "sha256": "84714a39d04f0fa6c52a48da7b4e2b0883c0f9360b962ac6ef4395b58f591eff"
+      "sha256": "68e2d03546986afbf597045a23dadffa826f09b7127e54981e1f91d43ad887ff"
     },
     "BaseRevised": {
       "solid": true,
       "nonmanifold": false,
       "facets": 80106,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          146.0,
-          146.0,
-          46.48429870605469
-        ]
-      ],
-      "sha256": "b12df3fa681734f07a6333d60f5b287ebe1ae32d5acb9e88d3540a4cccffab43"
+      "sha256": "0183837f405432f8bdf608477b8514a1fda4ae96771e958613cf3272e5106a8d"
     },
     "USBRetainingCollar": {
       "solid": true,
       "nonmanifold": false,
       "facets": 1744,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          34.0,
-          16.0,
-          2.5
-        ]
-      ],
       "sha256": "f4de6d3e1aa7fdaed76c13ae82595421b125fd46bc40854030f1d0aadbabb530"
     },
     "USBClamp": {
@@ -382,18 +359,6 @@
       "nonmanifold": false,
       "facets": 916,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          32.0,
-          10.0,
-          3.0
-        ]
-      ],
       "sha256": "877a8001a695df12c257125d49c1e0d113c83e4589f245f0bc486f1f6c285be8"
     },
     "CozirSpacer1": {
@@ -401,18 +366,6 @@
       "nonmanifold": false,
       "facets": 840,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0003636691253632307,
-          0.0,
-          -3.552713678800501e-15
-        ],
-        [
-          6.499636173248291,
-          6.498545169830322,
-          8.579999923706055
-        ]
-      ],
       "sha256": "b0d1f768033c7a785c2eb96c75ac1731858bf4e85343cf2ed4cb2117f896117e"
     },
     "CozirSpacer2": {
@@ -420,18 +373,6 @@
       "nonmanifold": false,
       "facets": 840,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0003636691253632307,
-          4.440892098500626e-16,
-          0.0
-        ],
-        [
-          6.499636173248291,
-          6.498545169830322,
-          8.579999923706055
-        ]
-      ],
       "sha256": "31aea3ddf69c42bbb12d6f3834fb9aa956792aa0af9b7f31c9af57f49cd5c180"
     },
     "IPSSpacer": {
@@ -439,18 +380,6 @@
       "nonmanifold": false,
       "facets": 840,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0003580742049962282,
-          0.0,
-          0.0
-        ],
-        [
-          6.399641990661621,
-          6.3985676765441895,
-          9.399999618530273
-        ]
-      ],
       "sha256": "5baa86eb89cb1a5ff6493193f0e1f092135f0661fa897002797690c3b0f12f1f"
     },
     "MintsIcon": {
@@ -458,18 +387,6 @@
       "nonmanifold": false,
       "facets": 121818,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          25.639999389648438,
-          19.218000411987305,
-          4.899999618530273
-        ]
-      ],
       "sha256": "5161991d38fce24218cdaa2fb13dd6e3270e039257d7fac7d6dff560d7a1024c"
     },
     "InsertFitCoupon": {
@@ -477,19 +394,7 @@
       "nonmanifold": false,
       "facets": 14380,
       "edge_defects": 0,
-      "bbox": [
-        [
-          0.0,
-          0.0,
-          0.0
-        ],
-        [
-          64.0,
-          28.0,
-          8.0
-        ]
-      ],
-      "sha256": "15c2e20b40af023c43f2efee645ea9cc91f7407ac3f87fd119afc0f0716e8d13"
+      "sha256": "7920b686fdbdd63027a5dbde418ad30eeb7bc1b7f70c8dc7d13b13206da22f70"
     }
   },
   "mesh_cleanup": {
@@ -510,9 +415,10 @@
         -38.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -523,9 +429,10 @@
         37.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -536,9 +443,10 @@
         -38.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -549,9 +457,10 @@
         37.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -562,9 +471,10 @@
         -37.98
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -575,9 +485,10 @@
         -0.48
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -588,9 +499,10 @@
         -30.6
       ],
       "diameter": 3.83,
-      "nominal_depth": 3.4,
+      "nominal_depth": 4.4,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -601,9 +513,10 @@
         -0.54998
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "BaseRevised",
@@ -614,9 +527,10 @@
         6.15
       ],
       "diameter": 3.83,
-      "nominal_depth": 3.4,
+      "nominal_depth": 4.4,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -627,9 +541,10 @@
         -56.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -640,9 +555,10 @@
         56.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -653,9 +569,10 @@
         -56.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -666,9 +583,10 @@
         56.0
       ],
       "diameter": 4.92,
-      "nominal_depth": 3.6,
+      "nominal_depth": 4.6,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -679,9 +597,10 @@
         58.0
       ],
       "diameter": 3.83,
-      "nominal_depth": 3.4,
+      "nominal_depth": 4.4,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -692,9 +611,10 @@
         58.0
       ],
       "diameter": 3.83,
-      "nominal_depth": 3.4,
+      "nominal_depth": 4.4,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -705,9 +625,10 @@
         73.0
       ],
       "diameter": 3.83,
-      "nominal_depth": 3.4,
+      "nominal_depth": 4.4,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     },
     {
       "object": "TopRevised",
@@ -718,15 +639,26 @@
         73.0
       ],
       "diameter": 3.83,
-      "nominal_depth": 3.4,
+      "nominal_depth": 4.4,
       "pocket_intrusion_mm3": 0.0,
-      "depth_stop_fraction": 1.0
+      "depth_stop_fraction": 1.0,
+      "complete_depth_stop": true
     }
   ],
+  "status": "Finalized5mm slit; unchanged user-confirmed physical Orange Pi position; documented source reference collision only",
+  "revision": {
+    "slit_height_mm": 5.0,
+    "slit_upper_y": 26.6,
+    "slit_lower_y": 31.6,
+    "lower_face_above_original_upper_face_mm": 1.0,
+    "M3_pocket_depth_mm": 4.6,
+    "M2_pocket_depth_mm": 4.4,
+    "all_17_depth_stops_complete": true
+  },
   "visual_review": {
-    "method": "Orthographic z-buffer rendering from saved CAD triangle geometry",
+    "method": "Rendered saved CAD geometry and exact post cross-section",
     "preview": "dreamV3-enclosure-preview.png",
-    "inspected": true,
-    "freecad_gui": "Blocked by repeated FreeCAD 1.1.1 macOS QMacAccessibilityElement crashes during opening; native document reopen passed."
-  }
+    "comparison": "dreamV3-slot-comparison.png"
+  },
+  "final_cad_sha256": "06f7c118356663d5b563262873f6bc7e3ef8343cc2aed3fd56456e6d8e7682d5"
 }

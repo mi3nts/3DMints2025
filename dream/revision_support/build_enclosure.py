@@ -161,8 +161,11 @@ for x,z in pcb_centers+cozir_aux+[ips_aux]:
 base_parts.append(slot_y(-34.41,-37.99,15.18,10,19,24.5,4.99))
 base=fuse(base_parts)
 # Clearance notch for the Orange Pi board edge at the rear-right PCB column.
-relief=box(20,32.6,29,15.2,3.7,16)
-relief=relief.makeFillet(.7,relief.Edges)
+# Negative Y points up the column toward the PCB seating tip.
+# Original upper face was Y=32.6. New lower face is Y=31.6,
+# 1 mm toward the tip. Final opening height is 5 mm: Y=26.6..31.6.
+relief=box(20,P['orange_pi_relief_center_y']-P['orange_pi_relief_height']/2,29,15.2,P['orange_pi_relief_height'],16)
+relief=relief.makeFillet(P['orange_pi_relief_radius'],relief.Edges)
 base=base.cut(relief)
 for h in base_pockets:base=base.cut(h)
 base=base.cut(box(-35.1,18.99,-38.44,1.6,P['M3_pocket_depth']+.02,.9))

@@ -17,11 +17,11 @@
   "M3_insert_OD": 4.72,
   "M3_insert_length": 3.43,
   "M3_pocket_diameter": 4.92,
-  "M3_pocket_depth": 3.6,
+  "M3_pocket_depth": 4.6,
   "M2_insert_OD": 3.63,
   "M2_insert_length": 3.18,
   "M2_pocket_diameter": 3.83,
-  "M2_pocket_depth": 3.4,
+  "M2_pocket_depth": 4.4,
   "PCB_boss_OD": 10.0,
   "IPS_boss_OD": 11.0,
   "COZIR_boss_OD": 11.0,
@@ -37,5 +37,10 @@
   "insert_dimensions_confirmed": true,
   "insert_status": "Dimensions confirmed from user McMaster drawings. Glue-in pockets: 0.20 mm diametral allowance. Validate on cured coupon.",
   "M3_part": "94459A769",
-  "M2_part": "94459A767"
+  "M2_part": "94459A767",
+  "orange_pi_relief_center_y": 29.1,
+  "orange_pi_relief_height": 5.0,
+  "orange_pi_relief_radius": 0.7,
+  "orange_pi_physical_position_confirmed": true,
+  "orange_pi_confirmation": "2026-11-10: user confirms physical Orange Pi is higher; slit height subsequently revised to5mm, retaining lower faceY31.6."
 }

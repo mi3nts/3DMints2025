@@ -82,9 +82,9 @@ panel(0,'Cover exterior','Raised MINTS icon · rear USB-C collar',
       ['TopRevised','USBRetainingCollar','MintsIcon'],[1,-2.6,1.6])
 panel(1,'Cover interior','Stepped logo seat · adjustable USB-C cradle',
       ['TopRevised','USBRetainingCollar','USBClamp','MintsIcon'],[-1,2.8,1.5])
-panel(2,'Bottom interior','Reinforced PCB, CozIR and IPS7100 mounts',
+panel(2,'Bottom interior','5 mm Orange Pi slit · reinforced mounts',
       ['BaseRevised'],[.7,-2.6,1.8])
-text(38,813,'M3 pockets  Ø4.92 × 3.60 deep     |     M2 pockets  Ø3.83 × 3.40 deep     |     Minimum side clearance  6.51',23)
+text(38,813,'M3 pockets  Ø4.92 × 4.60 deep     |     M2 pockets  Ø3.83 × 4.40 deep     |     Minimum side clearance  6.51',23)
 text(38,858,'Glue-in inserts for White V5. Test the cured fit coupon. USB cable housing fit remains provisional.',19,'#52646c')
 im.resize((W,H),Image.Resampling.LANCZOS).save(os.path.join(ROOT,'dreamV3-enclosure-preview.png'))
 print('Saved geometry preview')

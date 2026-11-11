@@ -20,7 +20,14 @@ IPSSpacer checked
     "USBRetainingCollar_Base_common_volume": 0.0,
     "USBClamp_Base_common_volume": 0.0
   },
-  "collisions": [],
+  "collisions": [
+    {
+      "enclosure": "BaseRevised",
+      "component": "Part__Feature4149",
+      "label": "\\X2\\0414043504420430043B044C\\X0\\",
+      "volume": 14.062165070485783
+    }
+  ],
   "retained_reference_collisions": [],
   "source_invalid_solids": [
     "Part__Feature4801"

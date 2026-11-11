@@ -33,9 +33,10 @@ for obj, kind, pt, axis in tests:
                   nominal_depth=depth, pocket_intrusion_mm3=intrusion,
                   depth_stop_fraction=seat_fraction)
     assert intrusion < .001, result
-    assert seat_fraction > .99, result
+    result['complete_depth_stop'] = seat_fraction > .99
+    assert result['complete_depth_stop'], result
     results.append(result)
-    print(obj, kind, list(pt), 'clear / depth stop present', flush=True)
+    print(obj, kind, list(pt), 'clear / full depth stop', flush=True)
 r['insert_pocket_checks'] = results
 json.dump(r, open(os.path.join(OUT, 'validation.json'), 'w'), indent=2)
 
