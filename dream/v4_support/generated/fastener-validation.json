@@ -1,0 +1,361 @@
+{
+  "nut_checks": [
+    {
+      "label": "closure -56.0 -56.0",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481886
+    },
+    {
+      "label": "closure -56.0 56.0",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481766
+    },
+    {
+      "label": "closure 56.0 -56.0",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.26137217254817
+    },
+    {
+      "label": "closure 56.0 56.0",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.261372172548186
+    },
+    {
+      "label": "USB collar -35.0",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 0.28165865613536545
+    },
+    {
+      "label": "USB collar -9.0",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 0.2816586561353424
+    },
+    {
+      "label": "USB clamp -34.5",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 0.28165865613534274
+    },
+    {
+      "label": "USB clamp -9.5",
+      "target": "TopRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 0.281658656135347
+    },
+    {
+      "label": "M3 -37.0 -38.0",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481675
+    },
+    {
+      "label": "M3 -37.0 37.0",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725482396
+    },
+    {
+      "label": "M3 37.0 -38.0",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481564
+    },
+    {
+      "label": "M3 37.0 37.0",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481772
+    },
+    {
+      "label": "M3 -31.82 -37.98",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.148242580117436
+    },
+    {
+      "label": "M3 -10.0 -0.48",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481928
+    },
+    {
+      "label": "IPS shared",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 0.28165865613534274
+    },
+    {
+      "label": "CozIR external",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 1.2613721725481637
+    },
+    {
+      "label": "IPS external",
+      "target": "BaseRevised",
+      "seated_overlap": 0.0,
+      "insertion_overlap": 0.0,
+      "rotation30_blocked_volume": 0.2816586561353592
+    }
+  ],
+  "nut_pair_checks": [],
+  "head_checks": [
+    {
+      "part": "USBRetainingCollar",
+      "x": -35.0,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBRetainingCollar",
+      "x": -9.0,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBClamp",
+      "x": -34.5,
+      "z": 55,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBClamp",
+      "x": -34.5,
+      "z": 58,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBClamp",
+      "x": -34.5,
+      "z": 61,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBClamp",
+      "x": -9.5,
+      "z": 55,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBClamp",
+      "x": -9.5,
+      "z": 58,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    },
+    {
+      "part": "USBClamp",
+      "x": -9.5,
+      "z": 61,
+      "head_overlap": 0.0,
+      "recess": 0.2
+    }
+  ],
+  "mating_checks": {
+    "TopRevised / USBRetainingCollar": 0.0,
+    "TopRevised / USBClamp": 0.0,
+    "USBClamp / USBRetainingCollar": 0.0
+  },
+  "orange_pi_slot_overlap": 0.0,
+  "hollow_columns": [
+    {
+      "label": "M3 -37.0 -38.0",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "M3 -37.0 37.0",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "M3 37.0 -38.0",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "M3 37.0 37.0",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 1.8,
+      "offset": [
+        1.2,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "M3 -31.82 -37.98",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "M3 -10.0 -0.48",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "IPS shared",
+      "height": 24.5,
+      "cavity_start": 7.0,
+      "cavity_length": 15.19,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 2.3100000000000005
+    },
+    {
+      "label": "CozIR external",
+      "height": 34.6,
+      "cavity_start": 8.0,
+      "cavity_length": 21.452,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 5.148
+    },
+    {
+      "label": "IPS external",
+      "height": 35.8,
+      "cavity_start": 8.0,
+      "cavity_length": 22.195999999999998,
+      "fraction": 0.62,
+      "radius": 2.2,
+      "offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drain_diameter": 2.6,
+      "foot": 5.603999999999999
+    }
+  ],
+  "coupon_layout": [
+    {
+      "kind": "M3",
+      "x": 12,
+      "z": 9,
+      "AF_allowance": 0.2
+    },
+    {
+      "kind": "M3",
+      "x": 36,
+      "z": 9,
+      "AF_allowance": 0.3
+    },
+    {
+      "kind": "M3",
+      "x": 60,
+      "z": 9,
+      "AF_allowance": 0.4
+    },
+    {
+      "kind": "M2",
+      "x": 12,
+      "z": 27,
+      "AF_allowance": 0.2
+    },
+    {
+      "kind": "M2",
+      "x": 36,
+      "z": 27,
+      "AF_allowance": 0.3
+    },
+    {
+      "kind": "M2",
+      "x": 60,
+      "z": 27,
+      "AF_allowance": 0.4
+    }
+  ]
+}

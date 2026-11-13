@@ -1,0 +1,18 @@
+{'label': 'closure -56.0 -56.0', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481886}
+{'label': 'closure -56.0 56.0', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481766}
+{'label': 'closure 56.0 -56.0', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.26137217254817}
+{'label': 'closure 56.0 56.0', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.261372172548186}
+{'label': 'USB collar -35.0', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.28165865613536545}
+{'label': 'USB collar -9.0', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.2816586561353424}
+{'label': 'USB clamp -34.5', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.28165865613534274}
+{'label': 'USB clamp -9.5', 'target': 'TopRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.281658656135347}
+{'label': 'M3 -37.0 -38.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481675}
+{'label': 'M3 -37.0 37.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725482396}
+{'label': 'M3 37.0 -38.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481564}
+{'label': 'M3 37.0 37.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481772}
+{'label': 'M3 -31.82 -37.98', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.148242580117436}
+{'label': 'M3 -10.0 -0.48', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481928}
+{'label': 'IPS shared', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.28165865613534274}
+{'label': 'CozIR external', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481637}
+{'label': 'IPS external', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.2816586561353592}
+Fastener validation passed

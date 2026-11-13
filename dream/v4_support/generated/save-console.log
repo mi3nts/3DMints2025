@@ -1,0 +1,72 @@
+{
+  "saved": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV4-enclosure.FCStd",
+  "standalone": [
+    "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV4-Base.FCStd",
+    "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV4-Top.FCStd"
+  ],
+  "mesh_checks": {
+    "TopRevised": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 130248,
+      "sha256": "e45b270441c5aca0ac39f63106a9523af73a803b19b775defc260e1a7e11b67e"
+    },
+    "BaseRevised": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 94986,
+      "sha256": "c21db23d8a45cb29883f230d3a237d3b401a390be1a570d14fc25290e255f4f8"
+    },
+    "USBRetainingCollar": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 2584,
+      "sha256": "59945bbd26ba550b38098851c41b34552a6565bb3a5bb430a7a5551407b9c442"
+    },
+    "USBClamp": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 1812,
+      "sha256": "09079af8ad7312db2ea18e297843897998c67260c3078b6b13b90c9a43fb1961"
+    },
+    "CozirSpacer1": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 840,
+      "sha256": "b0d1f768033c7a785c2eb96c75ac1731858bf4e85343cf2ed4cb2117f896117e"
+    },
+    "CozirSpacer2": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 840,
+      "sha256": "31aea3ddf69c42bbb12d6f3834fb9aa956792aa0af9b7f31c9af57f49cd5c180"
+    },
+    "IPSSpacer": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 840,
+      "sha256": "5baa86eb89cb1a5ff6493193f0e1f092135f0661fa897002797690c3b0f12f1f"
+    },
+    "MintsIcon": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 121818,
+      "sha256": "5161991d38fce24218cdaa2fb13dd6e3270e039257d7fac7d6dff560d7a1024c"
+    },
+    "NutFitCoupon": {
+      "solid": true,
+      "nonmanifold": false,
+      "edge_defects": 0,
+      "facets": 12594,
+      "sha256": "b503e1d1ce0f06ebee031ca6cd8221dd3c6116c78269669615e47c9f942ff93e"
+    }
+  }
+}

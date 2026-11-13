@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "solids": 1,
+  "volume": 1856.6879491355369,
+  "bbox": [
+    -38.5,
+    22.4,
+    51.0,
+    -5.5,
+    27.0,
+    65.0
+  ],
+  "electronics_collisions": [],
+  "mesh_facets": 1812,
+  "mesh_solid": true
+}
