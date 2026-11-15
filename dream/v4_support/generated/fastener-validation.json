@@ -89,7 +89,7 @@
       "target": "BaseRevised",
       "seated_overlap": 0.0,
       "insertion_overlap": 0.0,
-      "rotation30_blocked_volume": 1.148242580117436
+      "rotation30_blocked_volume": 1.1482425801174372
     },
     {
       "label": "M3 -10.0 -0.48",
@@ -117,7 +117,7 @@
       "target": "BaseRevised",
       "seated_overlap": 0.0,
       "insertion_overlap": 0.0,
-      "rotation30_blocked_volume": 0.2816586561353592
+      "rotation30_blocked_volume": 0.28165865613535923
     }
   ],
   "nut_pair_checks": [],

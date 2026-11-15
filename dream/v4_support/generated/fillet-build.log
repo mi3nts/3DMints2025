@@ -1,0 +1,81 @@
+Eligible structural edges: 142
+PCB rear left floor roots: 3 edges
+  trying R2.0
+  applied R2.0
+PCB rear right floor roots: 3 edges
+  trying R2.0
+  applied R2.0
+PCB front right floor roots: 1 edges
+  trying R2.0
+  applied R2.0
+PCB CozIR paired boss floor roots: 5 edges
+  trying R2.0
+  trying R1.5
+  applied R1.5
+CozIR external floor roots: 4 edges
+  trying R2.0
+  applied R2.0
+IPS external floor roots: 2 edges
+  trying R2.0
+  applied R2.0
+IPS bridge floor roots: 3 edges
+  trying R2.0
+  applied R2.0
+CozIR brace anchors floor roots: 3 edges
+  trying R2.0
+  applied R2.0
+PCB rear left transitions: 1 edges
+  trying R1.5
+  applied R1.5
+PCB rear right transitions: 1 edges
+  trying R1.5
+  applied R1.5
+PCB front right transitions: 1 edges
+  trying R1.5
+  applied R1.5
+PCB CozIR paired boss transitions: 7 edges
+  trying R1.5
+  applied R1.5
+CozIR external web (1, 1): 12 edges
+  trying R0.8
+  trying R0.5
+CozIR external web (-1, 1): 8 edges
+  trying R0.8
+  trying R0.5
+CozIR external web (-1, -1): 7 edges
+  trying R0.8
+  trying R0.5
+CozIR external web (1, -1): 9 edges
+  trying R0.8
+  trying R0.5
+IPS external web (1, 1): 7 edges
+  trying R0.8
+  trying R0.5
+IPS external web (-1, 1): 8 edges
+  trying R0.8
+  trying R0.5
+IPS external web (-1, -1): 7 edges
+  trying R0.8
+  trying R0.5
+IPS external web (1, -1): 8 edges
+  trying R0.8
+  trying R0.5
+IPS bridge transitions: 4 edges
+  trying R1.5
+  trying R1.0
+  applied R1.0
+CozIR brace anchors transitions: 27 edges
+  trying R1.5
+  trying R1.0
+  trying R0.75
+CozIR external straight post-web blends: 13 edges
+  trying R1.0
+  applied R1.0
+IPS external straight post-web blends: 11 edges
+  trying R1.0
+  trying R0.6
+Central CozIR node blends: 3 edges
+  trying R1.5
+  trying R1.0
+  trying R0.6
+  applied R0.6

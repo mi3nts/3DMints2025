@@ -10,9 +10,9 @@
 {'label': 'M3 -37.0 37.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725482396}
 {'label': 'M3 37.0 -38.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481564}
 {'label': 'M3 37.0 37.0', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481772}
-{'label': 'M3 -31.82 -37.98', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.148242580117436}
+{'label': 'M3 -31.82 -37.98', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.1482425801174372}
 {'label': 'M3 -10.0 -0.48', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481928}
 {'label': 'IPS shared', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.28165865613534274}
 {'label': 'CozIR external', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 1.2613721725481637}
-{'label': 'IPS external', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.2816586561353592}
+{'label': 'IPS external', 'target': 'BaseRevised', 'seated_overlap': 0.0, 'insertion_overlap': 0.0, 'rotation30_blocked_volume': 0.28165865613535923}
 Fastener validation passed

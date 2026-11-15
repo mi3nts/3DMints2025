@@ -1,0 +1,1900 @@
+{
+  "stock": {
+    "volume": 123465.4008004603,
+    "area": 69312.21940724691,
+    "edges": 2600
+  },
+  "steps": [
+    {
+      "name": "StructuralFillet",
+      "label": "PCB rear left floor roots",
+      "radius": 2.0,
+      "edges": [
+        95,
+        96,
+        97
+      ],
+      "count": 3
+    },
+    {
+      "name": "StructuralFillet001",
+      "label": "PCB rear right floor roots",
+      "radius": 2.0,
+      "edges": [
+        79,
+        80,
+        81
+      ],
+      "count": 3
+    },
+    {
+      "name": "StructuralFillet002",
+      "label": "PCB front right floor roots",
+      "radius": 2.0,
+      "edges": [
+        82
+      ],
+      "count": 1
+    },
+    {
+      "name": "StructuralFillet003",
+      "label": "PCB CozIR paired boss floor roots",
+      "radius": 1.5,
+      "edges": [
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "count": 5
+    },
+    {
+      "name": "StructuralFillet004",
+      "label": "CozIR external floor roots",
+      "radius": 2.0,
+      "edges": [
+        3,
+        5,
+        7,
+        9
+      ],
+      "count": 4
+    },
+    {
+      "name": "StructuralFillet005",
+      "label": "IPS external floor roots",
+      "radius": 2.0,
+      "edges": [
+        67,
+        77
+      ],
+      "count": 2
+    },
+    {
+      "name": "StructuralFillet006",
+      "label": "IPS bridge floor roots",
+      "radius": 2.0,
+      "edges": [
+        62,
+        66,
+        70
+      ],
+      "count": 3
+    },
+    {
+      "name": "StructuralFillet007",
+      "label": "CozIR brace anchors floor roots",
+      "radius": 2.0,
+      "edges": [
+        5,
+        9,
+        11
+      ],
+      "count": 3
+    },
+    {
+      "name": "StructuralFillet008",
+      "label": "PCB rear left transitions",
+      "radius": 1.5,
+      "edges": [
+        1215
+      ],
+      "count": 1
+    },
+    {
+      "name": "StructuralFillet009",
+      "label": "PCB rear right transitions",
+      "radius": 1.5,
+      "edges": [
+        1219
+      ],
+      "count": 1
+    },
+    {
+      "name": "StructuralFillet010",
+      "label": "PCB front right transitions",
+      "radius": 1.5,
+      "edges": [
+        1217
+      ],
+      "count": 1
+    },
+    {
+      "name": "StructuralFillet011",
+      "label": "PCB CozIR paired boss transitions",
+      "radius": 1.5,
+      "edges": [
+        1094,
+        1096,
+        1099,
+        1100,
+        1104,
+        1105,
+        1106
+      ],
+      "count": 7
+    },
+    {
+      "name": "StructuralFillet012",
+      "label": "IPS bridge transitions",
+      "radius": 1.0,
+      "edges": [
+        190,
+        198,
+        2565,
+        2567
+      ],
+      "count": 4
+    },
+    {
+      "name": "StructuralFillet013",
+      "label": "CozIR external straight post-web blends",
+      "radius": 1.0,
+      "edges": [
+        2622,
+        2623,
+        2625,
+        2628,
+        2630,
+        2631,
+        2633,
+        2635,
+        2636,
+        2638,
+        2640,
+        2641,
+        2643
+      ],
+      "count": 13
+    },
+    {
+      "name": "StructuralFillet014",
+      "label": "Central CozIR node blends",
+      "radius": 0.6,
+      "edges": [
+        16,
+        78,
+        80
+      ],
+      "count": 3
+    },
+    {
+      "name": "StructuralFillet015",
+      "label": "Small orthogonal joining corners",
+      "radius": 0.35,
+      "edges": [
+        9,
+        12,
+        13,
+        2667
+      ],
+      "count": 4
+    }
+  ],
+  "completed_groups": [
+    "PCB rear left floor roots",
+    "PCB rear right floor roots",
+    "PCB front right floor roots",
+    "PCB CozIR paired boss floor roots",
+    "CozIR external floor roots",
+    "IPS external floor roots",
+    "IPS bridge floor roots",
+    "Retained power-board supports floor roots",
+    "CozIR brace anchors floor roots",
+    "PCB rear left transitions",
+    "PCB rear right transitions",
+    "PCB front right transitions",
+    "PCB CozIR paired boss transitions",
+    "CozIR external web (1, 1)",
+    "CozIR external web (-1, 1)",
+    "CozIR external web (-1, -1)",
+    "CozIR external web (1, -1)",
+    "IPS external web (1, 1)",
+    "IPS external web (-1, 1)",
+    "IPS external web (-1, -1)",
+    "IPS external web (1, -1)",
+    "IPS bridge transitions",
+    "Retained power-board supports transitions",
+    "CozIR brace anchors transitions",
+    "CozIR external exposed planar web rounds",
+    "CozIR external straight post-web blends",
+    "IPS external exposed planar web rounds",
+    "IPS external straight post-web blends",
+    "Central CozIR node blends",
+    "Long beam outside edges",
+    "Orthogonal beam inside corners",
+    "Small orthogonal joining corners"
+  ],
+  "unresolved_groups": [
+    {
+      "label": "CozIR external web (1, 1)",
+      "edges": [
+        175,
+        1100,
+        1130,
+        1132,
+        1133,
+        1134,
+        2587,
+        2589,
+        2594,
+        2595,
+        2597,
+        2600
+      ]
+    },
+    {
+      "label": "CozIR external web (-1, 1)",
+      "edges": [
+        1161,
+        1163,
+        1164,
+        1175,
+        2610,
+        2612,
+        2613,
+        2615
+      ]
+    },
+    {
+      "label": "CozIR external web (-1, -1)",
+      "edges": [
+        1152,
+        1166,
+        1167,
+        1168,
+        2605,
+        2607,
+        2608
+      ]
+    },
+    {
+      "label": "CozIR external web (1, -1)",
+      "edges": [
+        169,
+        1089,
+        1136,
+        1137,
+        1138,
+        1140,
+        2591,
+        2602,
+        2603
+      ]
+    },
+    {
+      "label": "IPS external web (1, 1)",
+      "edges": [
+        312,
+        1206,
+        1207,
+        1208,
+        2666,
+        2667,
+        2669
+      ]
+    },
+    {
+      "label": "IPS external web (-1, 1)",
+      "edges": [
+        1212,
+        1227,
+        1229,
+        2658,
+        2660,
+        2661,
+        2662,
+        2664
+      ]
+    },
+    {
+      "label": "IPS external web (-1, -1)",
+      "edges": [
+        1191,
+        1198,
+        1200,
+        2652,
+        2654,
+        2655,
+        2656
+      ]
+    },
+    {
+      "label": "IPS external web (1, -1)",
+      "edges": [
+        276,
+        1178,
+        1179,
+        1181,
+        1187,
+        2647,
+        2648,
+        2650
+      ]
+    },
+    {
+      "label": "CozIR brace anchors transitions",
+      "edges": [
+        7,
+        15,
+        898,
+        901,
+        1113,
+        1115,
+        1126,
+        2458,
+        2460,
+        2464,
+        2465,
+        2466,
+        2468,
+        2480,
+        2496,
+        2578,
+        2582,
+        2584,
+        2615,
+        2617,
+        2619,
+        2622,
+        2628,
+        2630,
+        2631,
+        2633,
+        2635
+      ]
+    },
+    {
+      "label": "IPS external straight post-web blends",
+      "edges": [
+        2739,
+        2743,
+        2745,
+        2746,
+        2747,
+        2749,
+        2751,
+        2752,
+        2753,
+        2755,
+        2760
+      ]
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "index": 1,
+      "center": [
+        -48.01727785409129,
+        36.499999999999986,
+        2.039970613378163
+      ],
+      "length": 1.1338457211717758,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 69.44395478041653,
+      "ymin": 36.5,
+      "ymax": 36.5
+    },
+    {
+      "index": 13,
+      "center": [
+        -47.9969354723273,
+        36.49999999999999,
+        -3.1006549758845936
+      ],
+      "length": 1.0453007106906238,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 69.44395478041653,
+      "ymin": 36.5,
+      "ymax": 36.5
+    },
+    {
+      "index": 18,
+      "center": [
+        -48.037891086712186,
+        39.29968272409344,
+        3.9920814171810277
+      ],
+      "length": 4.273707554219117,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Cylinder"
+      ],
+      "angle": 91.32628751875794,
+      "ymin": 37.29999940000005,
+      "ymax": 41.300890814391146
+    },
+    {
+      "index": 19,
+      "center": [
+        -49.56490898164398,
+        35.3,
+        3.249131018356007
+      ],
+      "length": 4.112694490629571,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Cylinder"
+      ],
+      "angle": 20.556045219583478,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 23,
+      "center": [
+        -51.76402000000001,
+        38.69176772681696,
+        6.029654147022732
+      ],
+      "length": 3.4506353057172845,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 77.16412718511913,
+      "ymin": 37.08258188211764,
+      "ymax": 40.30169484222476
+    },
+    {
+      "index": 54,
+      "center": [
+        -49.56490898164398,
+        35.3,
+        -4.349091018355991
+      ],
+      "length": 4.1126944906295595,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Cylinder"
+      ],
+      "angle": 20.55604521958346,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 56,
+      "center": [
+        -51.764019999999995,
+        38.69176772681702,
+        -7.1296141470227585
+      ],
+      "length": 3.450635305717118,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 77.16412718511918,
+      "ymin": 37.08258188211779,
+      "ymax": 40.30169484222476
+    },
+    {
+      "index": 57,
+      "center": [
+        -47.970519821395314,
+        39.299686558645234,
+        -5.011835084944703
+      ],
+      "length": 4.273701690230229,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Cylinder"
+      ],
+      "angle": 91.30809479268315,
+      "ymin": 37.29999940000004,
+      "ymax": 41.30088581214356
+    },
+    {
+      "index": 66,
+      "center": [
+        -44.66348189612422,
+        42.300000000000004,
+        5.493030576520128
+      ],
+      "length": 2.0,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Cylinder"
+      ],
+      "angle": 102.4918397769598,
+      "ymin": 41.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 85,
+      "center": [
+        -57.163131018356005,
+        35.3,
+        3.249131018356021
+      ],
+      "length": 4.1126944906295595,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Cone"
+      ],
+      "angle": 20.556045219583478,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 90,
+      "center": [
+        -57.163131018356005,
+        35.3,
+        -4.349091018356018
+      ],
+      "length": 4.1126944906295595,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Cone"
+      ],
+      "angle": 20.556045219583478,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 110,
+      "center": [
+        -13.019430728700577,
+        36.49999999999999,
+        6.701519949172252
+      ],
+      "length": 6.368092778856401,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Cone"
+      ],
+      "angle": 20.556045219583442,
+      "ymin": 36.5,
+      "ymax": 36.5
+    },
+    {
+      "index": 112,
+      "center": [
+        -4.204610764472186,
+        36.5,
+        1.884576383841362
+      ],
+      "length": 18.93446339321536,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Cone"
+      ],
+      "angle": 20.556045219583442,
+      "ymin": 36.5,
+      "ymax": 36.5
+    },
+    {
+      "index": 117,
+      "center": [
+        -15.953002326636895,
+        36.30582148032448,
+        4.748774699999072
+      ],
+      "length": 0.956989598072604,
+      "concave": true,
+      "kinds": [
+        "BSplineSurface",
+        "Cone"
+      ],
+      "angle": 30.240940116281394,
+      "ymin": 36.11067406495303,
+      "ymax": 36.5
+    },
+    {
+      "index": 121,
+      "center": [
+        -15.95300232663687,
+        36.30582148032448,
+        -5.708774699999097
+      ],
+      "length": 0.9569895980726738,
+      "concave": true,
+      "kinds": [
+        "BSplineSurface",
+        "Cone"
+      ],
+      "angle": 30.133766453090658,
+      "ymin": 36.11067406495303,
+      "ymax": 36.49999999999999
+    },
+    {
+      "index": 125,
+      "center": [
+        -4.773951802494334,
+        36.30582298766479,
+        -6.435309667031031
+      ],
+      "length": 0.9634728252638174,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "BSplineSurface"
+      ],
+      "angle": 30.53261837886196,
+      "ymin": 36.11067406495304,
+      "ymax": 36.5
+    },
+    {
+      "index": 128,
+      "center": [
+        -15.226048197505621,
+        36.30582298766479,
+        -6.435309667031066
+      ],
+      "length": 0.9634728252637923,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "BSplineSurface"
+      ],
+      "angle": 30.603899066642064,
+      "ymin": 36.110674064953045,
+      "ymax": 36.5
+    },
+    {
+      "index": 143,
+      "center": [
+        -44.53331159427401,
+        42.300000000000004,
+        -6.464066711235332
+      ],
+      "length": 2.0,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Cylinder"
+      ],
+      "angle": 102.47062119711802,
+      "ymin": 41.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 163,
+      "center": [
+        -40.1919675297762,
+        43.29999999999999,
+        -19.13547651561603
+      ],
+      "length": 22.930356989144705,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 169,
+      "center": [
+        -40.68984899430126,
+        43.29999999999999,
+        18.091628894259387
+      ],
+      "length": 22.551909173407335,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 190,
+      "center": [
+        -54.96402000000001,
+        38.691767726817126,
+        6.029654147022797
+      ],
+      "length": 3.4506353057173196,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 77.16412718511924,
+      "ymin": 37.08258188211779,
+      "ymax": 40.30169484222495
+    },
+    {
+      "index": 195,
+      "center": [
+        -59.94365414702273,
+        38.691767726816934,
+        1.05002
+      ],
+      "length": 3.450635305717282,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 77.16412718511913,
+      "ymin": 37.08258188211762,
+      "ymax": 40.30169484222475
+    },
+    {
+      "index": 204,
+      "center": [
+        -59.943654147022755,
+        38.691767726817,
+        -2.1499800000000007
+      ],
+      "length": 3.4506353057171153,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 77.16412718511916,
+      "ymin": 37.08258188211778,
+      "ymax": 40.30169484222475
+    },
+    {
+      "index": 209,
+      "center": [
+        -54.96401999999999,
+        38.691767726816934,
+        -7.1296141470227266
+      ],
+      "length": 3.4506353057172845,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 77.16412718511914,
+      "ymin": 37.08258188211764,
+      "ymax": 40.30169484222476
+    },
+    {
+      "index": 215,
+      "center": [
+        4.786648858344185,
+        43.3,
+        -44.57190384344645
+      ],
+      "length": 13.629662357116052,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 226,
+      "center": [
+        -20.330559885550205,
+        43.3,
+        -40.11776397672471
+      ],
+      "length": 5.178031446034805,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 227,
+      "center": [
+        25.904369561976065,
+        43.29999999999998,
+        -36.75816486519413
+      ],
+      "length": 5.799142308824086,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 228,
+      "center": [
+        -25.730943309585815,
+        43.3,
+        -32.47151758485282
+      ],
+      "length": 15.455205907595543,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 229,
+      "center": [
+        30.784776493921413,
+        43.3,
+        -31.61679748024277
+      ],
+      "length": 8.7465819727529,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 230,
+      "center": [
+        -32.848795185588486,
+        43.3,
+        -28.806728074734107
+      ],
+      "length": 2.0661668538383853,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 231,
+      "center": [
+        41.536385737319215,
+        43.29999999999999,
+        -0.7485594805215453
+      ],
+      "length": 61.82727604138111,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 233,
+      "center": [
+        30.845594855301837,
+        43.3,
+        30.84559485530182
+      ],
+      "length": 11.113073492295017,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 235,
+      "center": [
+        14.498395479649322,
+        43.29999999999999,
+        41.718094086267364
+      ],
+      "length": 30.10274583715233,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 237,
+      "center": [
+        -14.4983954796493,
+        43.29999999999999,
+        41.71809408626736
+      ],
+      "length": 30.1027458371526,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 239,
+      "center": [
+        -30.84559485530184,
+        43.3,
+        30.84559485530184
+      ],
+      "length": 11.113073492295104,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 328,
+      "center": [
+        -56.00000000000001,
+        43.300000000000004,
+        -55.99999999999998
+      ],
+      "length": 43.982297150257125,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 329,
+      "center": [
+        -56.00000000000001,
+        43.300000000000004,
+        56.00000000000005
+      ],
+      "length": 43.982297150257125,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 330,
+      "center": [
+        56.00000000000001,
+        43.300000000000004,
+        -55.99999999999998
+      ],
+      "length": 43.982297150257125,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 331,
+      "center": [
+        56.00000000000001,
+        43.300000000000004,
+        56.00000000000005
+      ],
+      "length": 43.982297150257125,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 90.0,
+      "ymin": 43.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 350,
+      "center": [
+        -4.0,
+        42.3,
+        -44.82186966202994
+      ],
+      "length": 2.0,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 84.90031108578268,
+      "ymin": 41.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 364,
+      "center": [
+        -16.0,
+        42.3,
+        -42.05948168962618
+      ],
+      "length": 2.0,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 110.82749693201214,
+      "ymin": 41.3,
+      "ymax": 43.3
+    },
+    {
+      "index": 377,
+      "center": [
+        -53.36402000037774,
+        41.97856779817768,
+        -8.54998
+      ],
+      "length": 0.9281036507819442,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 20.55604521958346,
+      "ymin": 41.96666666666667,
+      "ymax": 42.002246888742405
+    },
+    {
+      "index": 384,
+      "center": [
+        -34.3414662980957,
+        42.943766322086205,
+        -29.810459177302015
+      ],
+      "length": 1.6828768637321652,
+      "concave": true,
+      "kinds": [
+        "BSplineSurface",
+        "BSplineSurface"
+      ],
+      "angle": 4.039541473758012,
+      "ymin": 42.34347256103373,
+      "ymax": 43.3
+    },
+    {
+      "index": 1174,
+      "center": [
+        65.75,
+        41.30372553263282,
+        3.7292041848894626
+      ],
+      "length": 2.084014416940236,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 152.99337798658252,
+      "ymin": 40.68570540576339,
+      "ymax": 42.002246883176774
+    },
+    {
+      "index": 1177,
+      "center": [
+        63.87967627571281,
+        40.8,
+        -54.0
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1197,
+      "center": [
+        63.87967627571281,
+        40.8,
+        54.0
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1210,
+      "center": [
+        65.75,
+        41.303725532633585,
+        8.570795815111559
+      ],
+      "length": 2.0840144169376913,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 152.9933779865774,
+      "ymin": 40.68570540576464,
+      "ymax": 42.002246883176774
+    },
+    {
+      "index": 1261,
+      "center": [
+        54.0,
+        40.8,
+        -63.87967627571281
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1267,
+      "center": [
+        -54.0,
+        40.8,
+        -63.87967627571281
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1277,
+      "center": [
+        -63.87967627571281,
+        40.8,
+        -54.0
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1283,
+      "center": [
+        -63.87967627571281,
+        40.8,
+        54.0
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1293,
+      "center": [
+        -54.0,
+        40.8,
+        63.87967627571281
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1299,
+      "center": [
+        54.0,
+        40.8,
+        63.87967627571281
+      ],
+      "length": 4.999999999999996,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 114.81899978728809,
+      "ymin": 38.3,
+      "ymax": 43.29999999999999
+    },
+    {
+      "index": 1305,
+      "center": [
+        -56.00000000000001,
+        43.20000000000001,
+        -55.99999999999998
+      ],
+      "length": 43.982297150257125,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 43.2,
+      "ymax": 43.2
+    },
+    {
+      "index": 1307,
+      "center": [
+        -56.00000000000001,
+        43.20000000000001,
+        56.00000000000005
+      ],
+      "length": 43.982297150257125,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 43.2,
+      "ymax": 43.2
+    },
+    {
+      "index": 1309,
+      "center": [
+        56.00000000000001,
+        43.20000000000001,
+        -55.99999999999998
+      ],
+      "length": 43.982297150257125,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 43.2,
+      "ymax": 43.2
+    },
+    {
+      "index": 1311,
+      "center": [
+        56.00000000000001,
+        43.20000000000001,
+        56.00000000000005
+      ],
+      "length": 43.982297150257125,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 43.2,
+      "ymax": 43.2
+    },
+    {
+      "index": 2651,
+      "center": [
+        -61.36401999999999,
+        41.97856779817767,
+        -0.5499799996222093
+      ],
+      "length": 0.9281036507819038,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 20.55604521958346,
+      "ymin": 41.96666666666667,
+      "ymax": 42.002246888742405
+    },
+    {
+      "index": 2686,
+      "center": [
+        59.99945508999999,
+        37.87303776839944,
+        -0.11230924833140578
+      ],
+      "length": 5.206784762435104,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.45497188598029,
+      "ymin": 35.4463742487521,
+      "ymax": 40.30169484222476
+    },
+    {
+      "index": 2687,
+      "center": [
+        62.25311263664692,
+        35.6667157787175,
+        2.354786419945953
+      ],
+      "length": 5.61880571678276,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Cylinder"
+      ],
+      "angle": 20.319057050801252,
+      "ymin": 35.44434520056376,
+      "ymax": 35.82665571375098
+    },
+    {
+      "index": 2688,
+      "center": [
+        64.73527251347886,
+        38.06234674589752,
+        4.550000000000002
+      ],
+      "length": 4.8006249931748926,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.62961436379608,
+      "ymin": 35.824626664003496,
+      "ymax": 40.30169484222493
+    },
+    {
+      "index": 2692,
+      "center": [
+        58.39945508962223,
+        41.978567798177686,
+        -1.8499999999999996
+      ],
+      "length": 0.9281036507819038,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 20.55604521958346,
+      "ymin": 41.96666666666667,
+      "ymax": 42.0022468887424
+    },
+    {
+      "index": 2699,
+      "center": [
+        52.16561845366884,
+        37.79977268098255,
+        4.550000000000001
+      ],
+      "length": 5.36399138060159,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.38547308141024,
+      "ymin": 35.29999999999996,
+      "ymax": 40.30169484222493
+    },
+    {
+      "index": 2700,
+      "center": [
+        54.66427567308801,
+        35.3,
+        2.4148205830879816
+      ],
+      "length": 5.392434046416453,
+      "concave": false,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 69.44395478041653,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 2701,
+      "center": [
+        56.799455090000016,
+        37.799772680982485,
+        -0.08383663633112838
+      ],
+      "length": 5.363991380601394,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.3854730814102,
+      "ymin": 35.29999999999998,
+      "ymax": 40.30169484222476
+    },
+    {
+      "index": 2712,
+      "center": [
+        64.7352725130558,
+        38.06234674480736,
+        7.750000000000003
+      ],
+      "length": 4.800624995513646,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.62961436281023,
+      "ymin": 35.824626661825135,
+      "ymax": 40.30169484222495
+    },
+    {
+      "index": 2713,
+      "center": [
+        59.999455090000005,
+        37.873037768615426,
+        12.412309248415324
+      ],
+      "length": 5.206784761971683,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.45497188618356,
+      "ymin": 35.44637424918361,
+      "ymax": 40.30169484222476
+    },
+    {
+      "index": 2714,
+      "center": [
+        62.25311263538881,
+        35.66671577859422,
+        9.945213578847634
+      ],
+      "length": 5.618805714499256,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Cylinder"
+      ],
+      "angle": 20.31905500318829,
+      "ymin": 35.44342246103404,
+      "ymax": 35.82757845241372
+    },
+    {
+      "index": 2715,
+      "center": [
+        50.39945508999999,
+        41.97856779817769,
+        6.150000000377778
+      ],
+      "length": 0.9281036507818956,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cone"
+      ],
+      "angle": 20.55604521958346,
+      "ymin": 41.96666666666667,
+      "ymax": 42.002246888742405
+    },
+    {
+      "index": 2730,
+      "center": [
+        56.79945509,
+        37.799772680982564,
+        12.383836636331162
+      ],
+      "length": 5.363991380601597,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.38547308141024,
+      "ymin": 35.29999999999998,
+      "ymax": 40.30169484222495
+    },
+    {
+      "index": 2731,
+      "center": [
+        54.664275673088,
+        35.3,
+        9.88517941691202
+      ],
+      "length": 5.392434046416448,
+      "concave": false,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 69.44395478041653,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 2732,
+      "center": [
+        52.16561845366887,
+        37.79977268098247,
+        7.750000000000002
+      ],
+      "length": 5.363991380601393,
+      "concave": true,
+      "kinds": [
+        "Cone",
+        "Plane"
+      ],
+      "angle": 76.38547308141021,
+      "ymin": 35.299999999999976,
+      "ymax": 40.301694842224755
+    },
+    {
+      "index": 2786,
+      "center": [
+        63.852176547155516,
+        33.812313332439054,
+        4.550000000000001
+      ],
+      "length": 4.024734170628598,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 73.08761019657416,
+      "ymin": 31.799999999999997,
+      "ymax": 35.82462666487811
+    },
+    {
+      "index": 2788,
+      "center": [
+        59.99945509000001,
+        33.623187101418914,
+        0.8340505430249553
+      ],
+      "length": 3.6463811101586145,
+      "concave": true,
+      "kinds": [
+        "Plane",
+        "Cylinder"
+      ],
+      "angle": 75.13633576766038,
+      "ymin": 31.80000000000132,
+      "ymax": 35.44637424907944
+    },
+    {
+      "index": 2789,
+      "center": [
+        64.04998623996309,
+        30.999999999999993,
+        5.749288180964472
+      ],
+      "length": 0.8028482886682813,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 89.58233502705846,
+      "ymin": 31.0,
+      "ymax": 31.0
+    },
+    {
+      "index": 2792,
+      "center": [
+        58.3982369267699,
+        30.999999999999996,
+        0.6722014039942676
+      ],
+      "length": 1.6064844232370887,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.01307492668167,
+      "ymin": 31.0,
+      "ymax": 31.0
+    },
+    {
+      "index": 2794,
+      "center": [
+        56.79945509,
+        33.55000002947107,
+        0.9489180570168191
+      ],
+      "length": 3.5000110548128918,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 71.02401949419041,
+      "ymin": 31.80000000000271,
+      "ymax": 35.30000000000169
+    },
+    {
+      "index": 2795,
+      "center": [
+        54.78239109575565,
+        35.3,
+        2.475888291382431
+      ],
+      "length": 5.1808340401194535,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.30176376710624,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 2796,
+      "center": [
+        53.3257204243813,
+        33.550000000000026,
+        4.550000000000001
+      ],
+      "length": 3.5000934919330007,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 73.08761019657418,
+      "ymin": 31.800000000000047,
+      "ymax": 35.3
+    },
+    {
+      "index": 2798,
+      "center": [
+        53.08871641169085,
+        31.0,
+        6.15000000000001
+      ],
+      "length": 1.605696577336552,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.41877991472263,
+      "ymin": 31.0,
+      "ymax": 31.0
+    },
+    {
+      "index": 2800,
+      "center": [
+        53.3257204243813,
+        33.550000000000026,
+        7.750000000000001
+      ],
+      "length": 3.5000934919330007,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 73.08761019657419,
+      "ymin": 31.800000000000047,
+      "ymax": 35.3
+    },
+    {
+      "index": 2801,
+      "center": [
+        54.78239109575564,
+        35.3,
+        9.82411170861758
+      ],
+      "length": 5.1808340401194535,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.30176376710624,
+      "ymin": 35.3,
+      "ymax": 35.3
+    },
+    {
+      "index": 2802,
+      "center": [
+        56.799455089999995,
+        33.55000002946905,
+        11.351081942983187
+      ],
+      "length": 3.5000110548130534,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 71.02401949419057,
+      "ymin": 31.80000000000021,
+      "ymax": 35.2999999999993
+    },
+    {
+      "index": 2804,
+      "center": [
+        58.39823692676986,
+        31.000000000000004,
+        11.62779859600573
+      ],
+      "length": 1.6064844232370898,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.01307492668167,
+      "ymin": 31.0,
+      "ymax": 31.0
+    },
+    {
+      "index": 2806,
+      "center": [
+        59.99945508999999,
+        33.62318710150378,
+        11.465949456975208
+      ],
+      "length": 3.6463811103329817,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 75.13633576766708,
+      "ymin": 31.799999999998903,
+      "ymax": 35.44637424925142
+    },
+    {
+      "index": 2807,
+      "center": [
+        63.85217654715119,
+        33.812313331847974,
+        7.750000000000001
+      ],
+      "length": 4.0247341694464005,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 73.08761019657415,
+      "ymin": 31.799999999999997,
+      "ymax": 35.824626663695945
+    },
+    {
+      "index": 2809,
+      "center": [
+        64.0499862399631,
+        30.999999999999996,
+        6.55071181903552
+      ],
+      "length": 0.8028482886683015,
+      "concave": true,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 89.58233502705846,
+      "ymin": 31.0,
+      "ymax": 31.0
+    },
+    {
+      "index": 2857,
+      "center": [
+        38.00000000000002,
+        40.3,
+        2.88
+      ],
+      "length": 25.13274122871836,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 40.3,
+      "ymax": 40.3
+    },
+    {
+      "index": 2867,
+      "center": [
+        38.00000000000002,
+        40.3,
+        -14.92
+      ],
+      "length": 25.13274122871836,
+      "concave": false,
+      "kinds": [
+        "Cylinder",
+        "Plane"
+      ],
+      "angle": 90.0,
+      "ymin": 40.3,
+      "ymax": 40.3
+    }
+  ]
+}

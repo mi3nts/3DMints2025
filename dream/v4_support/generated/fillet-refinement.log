@@ -1,0 +1,25 @@
+Eligible structural edges: 197
+CozIR external exposed planar web rounds: 20 edges
+  trying R0.8
+  trying R0.5
+CozIR external straight post-web blends: 13 edges
+  trying R1.0
+  applied R1.0
+IPS external exposed planar web rounds: 20 edges
+  trying R0.8
+  trying R0.5
+IPS external straight post-web blends: 11 edges
+  trying R1.0
+  trying R0.6
+Central CozIR node blends: 4 edges
+  trying R1.5
+  trying R1.0
+  trying R0.6
+Long beam outside edges: 6 edges
+  trying R1.0
+  trying R0.75
+  trying R0.5
+Orthogonal beam inside corners: 6 edges
+  trying R1.0
+  trying R0.6
+  applied R0.6

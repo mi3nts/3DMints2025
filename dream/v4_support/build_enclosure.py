@@ -71,6 +71,15 @@ def hollow(pt,axis,height,direction,label,notched=False):
  hollow_records.append(dict(label=label,height=height,cavity_start=start,cavity_length=length,fraction=.62,radius=radius,offset=list(offset),drain_diameter=2.6,foot=height-start-length))
  return fuse([tube]+drains)
 
+def soften_rib(s,r=.8,all_edges=False):
+ # Round convex rib rims before fusion, avoiding the fragile three-face corners
+ # that result when a late fillet tries to cross an already blended root.
+ bottom=s.BoundBox.YMax;top=s.BoundBox.YMin
+ edges=[e for e in s.Edges if e.BoundBox.YMin<bottom-.0001] if all_edges else [e for e in s.Edges if e.BoundBox.YLength<.0001 and abs(e.BoundBox.YMin-top)<.0001]
+ result=s.makeFillet(r,edges)
+ assert result.isValid() and len(result.Solids)==1
+ return result
+
 say('Building enlarged rounded shell')
 outside=rounded(P['outer_width'],P['outer_depth'],P['outer_corner_radius'],P['top_outer_y'],P['seam_top_y']-P['top_outer_y'])
 inside=rounded(P['outer_width']-2*P['wall'],P['outer_depth']-2*P['wall'],P['inner_corner_radius'],P['top_inner_y'],P['seam_top_y']-P['top_inner_y']+1)
@@ -127,30 +136,11 @@ clamp=box(-38.5,22.4,51,33,4.6,14)
 for x in [-34.5,-9.5]:
  clamp=clamp.cut(slot_y(x,58,2.4,8.4,22.3,4.9,1.19))
  clamp=clamp.cut(slot_y(x,58,4.3,10.3,24.8,2.3,2.14))
-# Flowing staggered capsules: hole direction fans out like tensioned fabric.
-# The 7.5 mm triangular pitch and <=4.5 mm major axis retain >=3 mm ligaments.
-say('Building flowing fabric vent field')
-vents=[];vent_layout=[]
-for row in range(6):
- y=-4.0+row*7.5*math.sqrt(3)/2
- for col in range(12):
-  u=-41.25+col*7.5+(3.75 if row%2 else 0)
-  if u>44:continue
-  stretch=1-(u/50)**2
-  length=3.5+max(0,stretch)
-  angle=42*math.sin(math.pi*u/96)*math.cos((y-12)/42)
-  for side in [-1,1]:
-   for wall in ['X','Z']:
-    if wall=='Z' and side==1 and ((-44<u<2 and y<29) or (12<u<38 and y<24)):continue
-    v=slot_z(0,0,length,2.2,0,12,1.09)
-    v.rotate(V(0,0,0),V(0,0,1),angle)
-    if wall=='X':
-     v.rotate(V(0,0,0),V(0,1,0),side*90);v.translate(V(side*65,y,u))
-    else:
-     if side<0:v.rotate(V(0,0,0),V(0,1,0),180)
-     v.translate(V(u,y,side*65))
-    vents.append(v);vent_layout.append(dict(wall=wall,side=side,u=u,y=y,length=length,angle=angle))
-vent_tool=Part.makeCompound(vents)
+# Circular center holes and diagonal, elongated holes at all four corners.
+sys.path.insert(0,os.path.join(ROOT,'v4_support'))
+from fabric_vents import build as build_fabric_vents
+say('Building four-corner fabric vents')
+vent_tool,vent_layout=build_fabric_vents(Part,V,OUT)
 top_unvented=top
 top=top.cut(vent_tool).removeSplitter()
 
@@ -185,7 +175,7 @@ for x,z in pcb_centers+cozir_aux:
 # Bridge the original battery opening without covering the battery volume (starts at y=44).
 # CozIR bridge is 7 mm deep x 12 mm wide (was 3.5 x 8); second brace ties it
 # into the front annulus. Rounded beam ends and conical node spread the load.
-base_parts.extend([slot_y(-27,-.48,46,12,36.5,7,5.9),slot_y(-10,-24.5,12,53,36.5,7,5.9),box(13.5,40,-49,8,3.5,23)])
+base_parts.extend([soften_rib(slot_y(-27,-.48,46,12,36.5,7,5.9)),soften_rib(slot_y(-10,-24.5,12,53,36.5,7,5.9)),soften_rib(box(13.5,40,-49,8,3.5,23),.8,True)])
 base_parts.append(Part.makeCone(5,8,8,V(-10,28.5,-.48),V(0,1,0)))
 base_parts.append(cyl(8,7,V(-10,36.5,-.48)))
 x,z=ips_aux
@@ -201,25 +191,37 @@ mounts.extend([{'kind':'CozIR external M3','point':list(cozir_pt),'axis':[0,1,0]
 # Wide tapered feet and two orthogonal webs reinforce tall sensor columns.
 for pt in [cozir_pt,ips_pt]:
  x,z=pt.x,pt.z
- base_parts.extend([Part.makeCone(5.5,8.5,8,V(x,35.3,z),V(0,1,0)),box(x-1.6,31,z-8,3.2,12.5,16),box(x-8,31,z-1.6,16,12.5,3.2)])
-# Tapered feet distribute PCB support loads into the base.
+ base_parts.extend([Part.makeCone(5.5,8.5,8,V(x,35.3,z),V(0,1,0)),soften_rib(box(x-1.6,31,z-8,3.2,12.5,16),.8,True),soften_rib(box(x-8,31,z-1.6,16,12.5,3.2),.8,True)])
+# Fully supported feet remove thin free ledges under the rear PCB columns.
 for x,z in pcb_centers+cozir_aux+[ips_aux]:
+ if (x,z) in [(-37.,-38.),(-31.82,-37.98)]:continue
  base_parts.append(Part.makeCone(5 if (x,z)!=ips_aux else 5.5,7.5,6,V(x,37.5,z),V(0,1,0)))
-# The front-left PCB and CozIR mounts share a wide obround boss.
-# Their 5.18 mm center spacing requires vertically staggered hex nut seats.
-base_parts.append(slot_y(-34.41,-37.99,15.18,10,19,24.5,4.99))
+for x,z in pcb_centers+[cozir_aux[0]]:
+ base_parts.append(cyl(9.25,5,(x,43.3,z)))
+# A single continuous obround flare avoids the intersecting-cone crease between
+# the two close PCB/CozIR mounts. Both nuts retain their measured axes.
+def capsule_wire(cx,cz,w,d,y):
+ r=d/2;l=cx-(w-d)/2;rr=cx+(w-d)/2
+ a=V(l,y,cz+r);b=V(l,y,cz-r);c=V(rr,y,cz-r);e=V(rr,y,cz+r)
+ return Part.Wire([Part.Arc(a,V(l-r,y,cz),b).toShape(),Part.makeLine(b,c),Part.Arc(c,V(rr+r,y,cz),e).toShape(),Part.makeLine(e,a)])
+base_parts.append(Part.Face(capsule_wire(-34.41,-37.99,15.18,10,19)).extrude(V(0,24.5,0)))
+base_parts.append(Part.makeLoft([capsule_wire(-34.41,-37.99,15.18,10,35.5),capsule_wire(-34.41,-37.99,21.18,16,43.3)],True,True))
 base=fuse(base_parts)
+base.exportBrep(os.path.join(OUT,'BaseBeforeFillets.brep'))
+from fillet_base import smooth_base
+base=smooth_base(base,OUT,say)
 # Clearance notch for the Orange Pi board edge at the rear-right PCB column.
 # Negative Y points up the column toward the PCB seating tip.
 # Original upper face was Y=32.6. New lower face is Y=31.6,
 # 1 mm toward the tip. Final opening height is 5 mm: Y=26.6..31.6.
 relief=box(20,P['orange_pi_relief_center_y']-P['orange_pi_relief_height']/2,29,15.2,P['orange_pi_relief_height'],16)
 relief=relief.makeFillet(P['orange_pi_relief_radius'],relief.Edges)
-base=base.cut(relief)
-for h in base_pockets+cavities:base=base.cut(h)
+cut_tools=[relief]+base_pockets+cavities
 for x,z in closures:
- base=base.cut(cyl(1.7,8,(x,42,z))).cut(cyl(3.0,3.3,(x,45.1,z)))
-base=base.removeSplitter()
+ cut_tools.extend([cyl(1.7,8,(x,42,z)),cyl(3.0,3.3,(x,45.1,z))])
+base_cut_tool=fuse(cut_tools)
+base_cut_tool.exportBrep(os.path.join(OUT,'BaseFunctionalCuts.brep'))
+base=base.cut(base_cut_tool).removeSplitter()
 # Removable spacing sleeves between the PCB and the sensor underside.
 spacers=[]
 for i,(x,z) in enumerate(cozir_aux):
@@ -230,7 +232,7 @@ s=cyl(3.2,17.49-8.09,(x,8.09,z)).cut(cyl(1.3,10,(x,8,z)))
 spacers.append(('IPSSpacer',s))
 
 shapes={'TopShell':top_shell,'TopUnvented':top_unvented,'VentPattern':vent_tool,'LogoSeatTool':logo,'TopRevised':top,'BaseRevised':base,'USBRetainingCollar':collar,'USBClamp':clamp,**dict(spacers)}
-report={'parameters':P,'mounts':mounts,'nut_pockets':nut_records,'hollow_columns':hollow_records,'vent_layout':vent_layout,'shape_checks':{},'usb_fit':'Provisional cable housing: 18 x 10 mm, throat 11 x 5.5 mm. Adjustable clamp, measure actual cable before printing.'}
+report={'fillet_validation':json.load(open(os.path.join(OUT,'fillet-validation.json'))),'vent_validation':json.load(open(os.path.join(OUT,'vent-validation.json'))),'parameters':P,'mounts':mounts,'nut_pockets':nut_records,'hollow_columns':hollow_records,'vent_layout':vent_layout,'shape_checks':{},'usb_fit':'Provisional cable housing: 18 x 10 mm, throat 11 x 5.5 mm. Adjustable clamp, measure actual cable before printing.'}
 for name,s in shapes.items():
  s.exportBrep(os.path.join(OUT,name+'.brep'))
  if name in ['TopRevised','BaseRevised','USBRetainingCollar','USBClamp'] or 'Spacer' in name:

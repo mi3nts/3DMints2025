@@ -1,6 +1,6 @@
-# DREAM V4 — nut-fastened enclosure
+# DREAM V4 — smooth structural fillets and four-corner vents
 
-Additional revision for Formlabs White Resin V5 at 0.10 mm layer height. V3 is retained unchanged. V4 uses removable, side-loaded hex nuts instead of the V3 glued inserts. Dimensions below are millimetres.
+Updated 2026-11-15 with smooth structural fillets and a four-corner stretch vent pattern. Additional revision for Formlabs White Resin V5 at 0.10 mm layer height. V3 is retained unchanged. V4 uses removable, side-loaded hex nuts instead of the V3 glued inserts. Dimensions below are millimetres.
 
 ## Files
 
@@ -10,9 +10,11 @@ Additional revision for Formlabs White Resin V5 at 0.10 mm layer height. V3 is r
 - `dreamV4-NutFitCoupon.FCStd`: fit coupon CAD.
 - `dreamV4-print-meshes.zip`: nine individual printable STLs, including the coupon and logo.
 - `dreamV4-enclosure-preview.png`: views rendered from the actual CAD geometry.
+- `dreamV4-design-details.png`: column-root and cover nut-slot close-ups.
+- `dreamV4-vent-pattern.png`: dimensioned view of the four-corner vent field.
 - `v4_support/`: dimensions, native FreeCAD generator, checks and reports.
 
-The FreeCAD components are editable native BRep solids. The included Python generator reconstructs the geometry from dimensions; this is not a fully constrained Sketcher/PartDesign feature tree. Existing `.form` print jobs belong to the earlier design and have not been updated for V4.
+The base now contains 16 native, editable `Part::Fillet` features, followed by a `Part::Cut` for the nut seats, wash cavities and preserved slit. Expand the base object to inspect the fillet radii. The underlying stock and other components are BRep solids; the included Python generator reconstructs them from dimensions. This is not a fully constrained Sketcher feature tree. Existing `.form` print jobs belong to the earlier design and have not been updated for V4.
 
 ## Hardware and fits
 
@@ -30,6 +32,8 @@ Load all nuts before fitting the electronics. The screw captures each nut after 
 ## Base
 
 - All nine PCB/sensor columns have a side-loading hex nut seat and a screw-only top clearance hole.
+- Broad native FreeCAD fillets blend the column roots into the base; smaller fillets round exposed rib rims and vertical edges. Most floor-root blends use R2.0, with R1.5 at the close paired mount. Rib edge rounds use R0.8. Functional nut flats, screw holes, seating faces and the Orange Pi slit retain their required geometry.
+- PCB root lands now support the full foot down to the base plate. The adjacent front-left PCB/CozIR columns share one continuous flared foot, removing the crease between the previous overlapping cones.
 - Most nut pockets begin 2.4 mm below the mounting face. The close front-left CozIR pocket begins 6.3 mm below it, staggered relative to the adjacent PCB nut because their axes are only 5.18 mm apart. These two channels load from opposite Z directions.
 - Each column has an axial cavity extending **62% of its height**, with a solid cap, solid foot and two Ø2.6 wash/drain ports. Ordinary cavity diameter is 4.4 mm. The notched Orange Pi column uses a Ø3.6 cavity offset 1.2 mm away from the slit.
 - The central CozIR support at X−10/Z−0.48 now has **two 12 mm wide ×7 mm deep beams** anchored to the left and front base annulus, plus a tapered node reaching Ø16. Previously it relied on one 8 mm wide ×3.5 mm deep cantilever. Rounded beam ends and the wider node distribute the load. This is a structural improvement, not a tested drop/impact rating.
@@ -44,7 +48,7 @@ Load all nuts before fitting the electronics. The screw captures each nut after 
 - The inner cable clamp uses another two side-loaded M2 nuts. Its slots allow 6 mm fore/aft travel. Recessed slots also put the screw heads 0.20 mm below the clamp face. The clamp is 4.6 mm thick and has enlarged end margins around its head recesses.
 - The cradle remains **provisional for the cable housing**: 18×10 housing clearance, 11×5.5 collar throat. Confirm the actual extension cable housing and plug engagement before printing; the linked cable had no reliable supplied housing dimensions. Packing shims can accommodate a smaller housing.
 - Four cover closure posts also use M3 nut traps, so this revision does not require glued inserts.
-- Each side has a flowing field of rounded capsule vents. Their angles fan outward like stretched fabric; length varies from approximately 3.5 to4.5, width 2.2, on a 7.5 triangular pitch. The nominal minimum ligament is3 mm. Solid borders and port keep-outs remain around the USB and switch openings. Vent airflow and acoustic performance have not been physically measured.
+- Each side has a four-corner stretch pattern: a 3×3 circular center zone (Ø2.30), progressively elongated elliptical holes toward the perimeter, and diagonal corner holes measuring 6.21×1.90. Hole rows bow inward between the four corner anchors. The measured minimum ligament between adjacent holes is 2.55 mm. The rear wall follows the same field, with holes omitted around the USB cradle and switch guide. This is a geometric interpretation of the supplied fabric reference, not a hyperelastic simulation. Vent airflow has not been physically measured.
 - The stepped logo seat, 0.9 mm proud MINTS face, 14×6 rear switch access and overall mating footprint are retained from V3.
 
 ## Fit coupon and assembly
@@ -65,6 +69,8 @@ Use the new V4 STLs in a new PreForm job. Orient and support parts so supports d
 - The only electronics intersection is the existing 14.062 mm³ overlap of the old Orange Pi reference with the preserved slit column. The user previously confirmed the physical Orange Pi sits higher and explicitly requested this slit position. That reference has deliberately not been moved by an invented offset.
 - The source IPS `ips7101` solid has a pre-existing invalid geometry condition; its reference envelope is included, but the actual physical fit remains to be confirmed.
 - White V5 impact performance, nut pull-out strength and final cable fit require physical testing. The design does not imply a measured strength rating.
-- The FreeCAD 1.1.1 macOS GUI encountered its accessibility-related crash while opening the existing assembly. Native FreeCAD saved/reopened and geometry checks succeeded; the preview is rendered from the CAD triangles.
+- The FreeCAD desktop connection remained unreliable during this revision. Native FreeCAD Fillet/Part operations, file reopening and geometry checks are used; previews are rendered from the actual CAD triangles.
+
+The previous V4 is archived at `v4_support/superseded/V4-before-smooth-fillets-four-corner-vents.zip`.
 
 Detailed reports: `v4_support/generated/validation.json` and `fastener-validation.json`. No changes were made to the V3 deliverables.

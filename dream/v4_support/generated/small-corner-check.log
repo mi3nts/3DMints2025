@@ -1,0 +1,17 @@
+Localized corner changes isolated
+{
+  "volume_crosscheck_residual": 0.057972862026582306,
+  "volume_crosscheck_tolerance": 0.11926942302186089,
+  "added_volume": 0.3023511917781443,
+  "reference_parts_checked": 718,
+  "new_collisions": [],
+  "retained_orange_pi_overlap": 14.0621650704858,
+  "mating_checks": {
+    "TopRevised": 0.0,
+    "USBRetainingCollar": 0.0,
+    "USBClamp": 0.0
+  },
+  "base_volume": 119269.66739986031,
+  "mesh_facets": 173418,
+  "mesh_solid": true
+}

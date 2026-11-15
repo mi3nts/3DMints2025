@@ -12,8 +12,6 @@
   "lip_clearance": 0.35,
   "lip_wall": 2.4,
   "lip_height": 5.0,
-  "vent_diameter": 3.0,
-  "vent_pitch": 7.5,
   "PCB_boss_OD": 10.0,
   "IPS_boss_OD": 11.0,
   "COZIR_boss_OD": 11.0,
@@ -46,5 +44,18 @@
   "M3_head_height": 3.0,
   "M2_head_diameter": 3.8,
   "M2_head_height": 2.0,
-  "version": 4
+  "version": 4,
+  "revision": "2026-11-15 smooth structural fillets and four-corner vents",
+  "structural_root_radius": 2.0,
+  "paired_root_radius": 1.5,
+  "rib_edge_radius": 0.8,
+  "vent_center_diameter": 2.3,
+  "vent_corner_major": 6.21,
+  "vent_corner_minor": 1.9,
+  "vent_boundary_bow": 0.22,
+  "vent_grid_columns": 11,
+  "vent_grid_rows": 7,
+  "vent_field_half_width": 44,
+  "vent_field_half_height": 20,
+  "vent_field_center_y": 12
 }

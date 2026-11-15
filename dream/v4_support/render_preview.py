@@ -3,7 +3,7 @@ import os, json, gzip
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-with gzip.open(os.path.join(ROOT, 'v4_support/generated/preview-meshes.json.gz'), 'rt') as f:
+with gzip.open(os.environ.get('DREAM_PREVIEW_MESHES',os.path.join(ROOT, 'v4_support/generated/preview-meshes.json.gz')), 'rt') as f:
     DATA = json.load(f)
 S = 2
 W, H = 2100, 920
@@ -78,13 +78,13 @@ def panel(index, title, subtitle, names, camera):
         pixels[ylo:yhi+1,xlo:xhi+1][mask]=rgb[i]
     im.paste(Image.fromarray(pixels),(x0*S,y0*S))
 
-panel(0,'Cover exterior','Flowing fabric vents · flush USB-C collar',
+panel(0,'Cover exterior','Four-corner stretch · flush USB-C collar',
       ['TopRevised','USBRetainingCollar','MintsIcon'],[1,-2.6,1.6])
-panel(1,'Cover interior','M2 nut seats · recessed screw heads',
+panel(1,'Cover interior','M3 corner nut slots · M2 USB fasteners',
       ['TopRevised','USBRetainingCollar','USBClamp','MintsIcon'],[-1,2.8,1.5])
-panel(2,'Bottom interior','5 mm slit · braced CozIR · hollow posts',
+panel(2,'Bottom interior','Smooth root fillets · rounded support ribs',
       ['BaseRevised'],[.7,-2.6,1.8])
-text(38,813,'M3 nut seats  5.80 AF × 2.70     |     M2 nut seats  4.30 AF × 1.90     |     Side clearance  >=6.51',23)
+text(38,813,'M3 nut seats  5.80 AF × 2.70     |     M2 nut seats  4.30 AF × 1.90     |     Side clearance  ≈6.51',23)
 text(38,858,'Nut-fastened White V5 revision. Test the cured nut-fit coupon. USB housing fit remains provisional.',19,'#52646c')
 im.resize((W,H),Image.Resampling.LANCZOS).save(os.path.join(ROOT,'dreamV4-enclosure-preview.png'))
 print('Saved geometry preview')
