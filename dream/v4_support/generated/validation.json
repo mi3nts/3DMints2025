@@ -6052,7 +6052,7 @@
     "M2_head_diameter": 3.8,
     "M2_head_height": 2.0,
     "version": 4,
-    "revision": "2026-11-15 smooth structural fillets and four-corner vents",
+    "revision": "2026-11-15 bridge-to-pillar fillets and verified middle-pillar M3 slot",
     "structural_root_radius": 2.0,
     "paired_root_radius": 1.5,
     "rib_edge_radius": 0.8,
@@ -6064,7 +6064,10 @@
     "vent_grid_rows": 7,
     "vent_field_half_width": 44,
     "vent_field_half_height": 20,
-    "vent_field_center_y": 12
+    "vent_field_center_y": 12,
+    "bridge_side_fillet_radius": 1.5,
+    "bridge_middle_fillet_radius": 2.0,
+    "bridge_middle_node_diameter": 20.0
   },
   "mounts": [
     {
@@ -10827,7 +10830,7 @@
       "valid": true,
       "closed": true,
       "solids": 1,
-      "volume": 119269.66739986028,
+      "volume": 119710.20149127471,
       "bbox": [
         -73.0,
         7.715696296989274,
@@ -10837,7 +10840,7 @@
         73.0
       ],
       "mesh_solid": true,
-      "mesh_facets": 173422
+      "mesh_facets": 175726
     },
     "USBRetainingCollar": {
       "valid": true,
@@ -11079,22 +11082,6 @@
       "overlap": 0.0
     }
   ],
-  "small_corner_validation": {
-    "volume_crosscheck_residual": 0.057972862026582306,
-    "volume_crosscheck_tolerance": 0.11926942302186089,
-    "added_volume": 0.3023511917781443,
-    "reference_parts_checked": 718,
-    "new_collisions": [],
-    "retained_orange_pi_overlap": 14.0621650704858,
-    "mating_checks": {
-      "TopRevised": 0.0,
-      "USBRetainingCollar": 0.0,
-      "USBClamp": 0.0
-    },
-    "base_volume": 119269.66739986031,
-    "mesh_facets": 173418,
-    "mesh_solid": true
-  },
   "native_fillet_steps": [
     {
       "name": "StructuralFillet",
@@ -11281,6 +11268,42 @@
         2667
       ],
       "count": 4
+    },
+    {
+      "name": "BridgeJunctionFillet",
+      "label": "Bridge to side-pillar fillets",
+      "radius": 1.5,
+      "edges": [
+        8,
+        19,
+        30
+      ],
+      "count": 3
+    },
+    {
+      "name": "BridgeJunctionFillet001",
+      "label": "Middle pillar to bridge shoulder",
+      "radius": 2.0,
+      "edges": [
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "count": 5
+    },
+    {
+      "name": "BridgeJunctionFillet002",
+      "label": "Both bridge arms to middle node",
+      "radius": 2.0,
+      "edges": [
+        35,
+        37,
+        48,
+        51
+      ],
+      "count": 4
     }
   ],
   "final_file": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV4-enclosure.FCStd",
@@ -11288,7 +11311,6 @@
     "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV4-Base.FCStd",
     "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/dreamV4-Top.FCStd"
   ],
-  "final_file_reopened": true,
   "mesh_checks": {
     "TopRevised": {
       "solid": true,
@@ -11301,8 +11323,8 @@
       "solid": true,
       "nonmanifold": false,
       "edge_defects": 0,
-      "facets": 173422,
-      "sha256": "6a45a91559f2b84b5b1ff394dc1e924f62a9e73609f5abdbe0e2ebe40c113b88"
+      "facets": 175726,
+      "sha256": "166bfe26d45d888e5921e077ab48681ad228251ee43185b972e5bb7b8d578660"
     },
     "USBRetainingCollar": {
       "solid": true,
@@ -11730,5 +11752,92 @@
     "electronics_collisions": [],
     "mesh_facets": 1812,
     "mesh_solid": true
-  }
+  },
+  "bridge_fillet_validation": {
+    "source_stamp": {
+      "volume": 123606.19267121557,
+      "area": 69171.84112771603,
+      "edges": 2919,
+      "policy": 1
+    },
+    "steps": [
+      {
+        "name": "BridgeJunctionFillet",
+        "label": "Bridge to side-pillar fillets",
+        "radius": 1.5,
+        "edges": [
+          8,
+          19,
+          30
+        ],
+        "count": 3
+      },
+      {
+        "name": "BridgeJunctionFillet001",
+        "label": "Middle pillar to bridge shoulder",
+        "radius": 2.0,
+        "edges": [
+          61,
+          62,
+          63,
+          64,
+          65
+        ],
+        "count": 5
+      },
+      {
+        "name": "BridgeJunctionFillet002",
+        "label": "Both bridge arms to middle node",
+        "radius": 2.0,
+        "edges": [
+          35,
+          37,
+          48,
+          51
+        ],
+        "count": 4
+      }
+    ],
+    "final_feature": "BridgeJointFusion",
+    "history": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/v4_support/generated/BridgeFilletHistory.FCStd",
+    "middle_node_diameter": 20,
+    "side_radius": 1.5,
+    "middle_radius": 2.0,
+    "valid": true,
+    "closed": true,
+    "solids": 1,
+    "volume": 124057.39535590191
+  },
+  "bridge_fit_validation": {
+    "method": "Conservative complete patch envelopes; unchanged source stock SHA256 and union feature graph verified",
+    "source_stock_sha256": "600a19d63cef549448da907d48c60300201b15721a28353fbf71f8503084d453",
+    "reference_parts_checked": 718,
+    "new_collisions": [],
+    "patch_volumes": [
+      5125.45568256924,
+      9411.579497252564
+    ],
+    "mating_patch_checks": {
+      "TopRevised": 0.0,
+      "USBRetainingCollar": 0,
+      "USBClamp": 0
+    },
+    "middle_nut_slot": "Checked separately by full nut insertion sweep"
+  },
+  "middle_drain_extension": {
+    "length": 12,
+    "diameter": 2.6,
+    "center": [
+      -10,
+      39.19,
+      -0.48
+    ],
+    "direction": [
+      0,
+      0,
+      1
+    ],
+    "fit_check_note": "Only this additional cylindrical subtraction follows the conservative bridge-patch check; it cannot add interference."
+  },
+  "final_file_reopened": true
 }

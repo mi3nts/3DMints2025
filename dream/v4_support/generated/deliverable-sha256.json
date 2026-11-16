@@ -1,6 +1,6 @@
 {
-  "dreamV4-Base.FCStd": "d230635e731fcbf228861818dd0fef335fbda1fa0f990dd81214d5d762e38517",
-  "dreamV4-BaseRevised.stl": "6a45a91559f2b84b5b1ff394dc1e924f62a9e73609f5abdbe0e2ebe40c113b88",
+  "dreamV4-Base.FCStd": "1f5bebeaf9d09bf6a35859e17107430e503cb8d7d2af73f30fe88de153da1f9c",
+  "dreamV4-BaseRevised.stl": "166bfe26d45d888e5921e077ab48681ad228251ee43185b972e5bb7b8d578660",
   "dreamV4-CozirSpacer1.stl": "b0d1f768033c7a785c2eb96c75ac1731858bf4e85343cf2ed4cb2117f896117e",
   "dreamV4-CozirSpacer2.stl": "31aea3ddf69c42bbb12d6f3834fb9aa956792aa0af9b7f31c9af57f49cd5c180",
   "dreamV4-IPSSpacer.stl": "5baa86eb89cb1a5ff6493193f0e1f092135f0661fa897002797690c3b0f12f1f",
@@ -11,10 +11,11 @@
   "dreamV4-TopRevised.stl": "9c596613e382d2d48577bbfb752b18e3381ec17559a20fdf69bb9d42a2006cb9",
   "dreamV4-USBClamp.stl": "09079af8ad7312db2ea18e297843897998c67260c3078b6b13b90c9a43fb1961",
   "dreamV4-USBRetainingCollar.stl": "59945bbd26ba550b38098851c41b34552a6565bb3a5bb430a7a5551407b9c442",
-  "dreamV4-design-details.png": "ed26118f465b0baf72b9e6724acc7cea37da02165ffd656828b76730ed4e67a8",
-  "dreamV4-enclosure-notes.md": "8081cdef624af8253505993f4b802f1cf15e5af28a6270100c45513afc08cb25",
-  "dreamV4-enclosure-preview.png": "4d699614648c78ac23ddfd29b75689112dbf23e873e1d36431a8e4d763a5923c",
-  "dreamV4-enclosure.FCStd": "8d72d0c04f74a21bb40b2ee83c2506f19325036927bbdb2c87bd85f89a065ff0",
-  "dreamV4-print-meshes.zip": "30e9d890f570d9a3dccb7289de6a61b1b166009ec8f022500ceb383ba109057b",
+  "dreamV4-bridge-details.png": "9e45708675d7ea165f95b2fe18f97f552fd316af0c9b92b94c981a881f39bfaf",
+  "dreamV4-design-details.png": "8f02672fbdec74d7d4063bec231c6fd7df448e0b8c55c68e44b5a29604b848a3",
+  "dreamV4-enclosure-notes.md": "bfa2f859d73d64b3e06d2d22ae905a1c5d1abf3fe4f3c506ba44d683c8f7e0a3",
+  "dreamV4-enclosure-preview.png": "083363c4fc3a74d41bb1ad3d647b8c82cc1446245ff0b2743009c92d1df7696d",
+  "dreamV4-enclosure.FCStd": "34c880fbfe66e0dd35b866b206dd5657dc68b375da5d0fdd5dded5f4d1526e99",
+  "dreamV4-print-meshes.zip": "a02ce14b41919a033f19f8e0994fc487252a380e1d7010dd04f450553c73c27c",
   "dreamV4-vent-pattern.png": "eb50b22753c5d05873ee0c098a8e87ffbec5044ccfff3fbe2924ba325c09394d"
 }

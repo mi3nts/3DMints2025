@@ -1,6 +1,6 @@
 # DREAM V4 — smooth structural fillets and four-corner vents
 
-Updated 2026-11-15 with smooth structural fillets and a four-corner stretch vent pattern. Additional revision for Formlabs White Resin V5 at 0.10 mm layer height. V3 is retained unchanged. V4 uses removable, side-loaded hex nuts instead of the V3 glued inserts. Dimensions below are millimetres.
+Updated 2026-11-15 with additional bridge-to-pillar fillets and a verified middle-pillar M3 nut slot. The smooth floor roots and four-corner stretch vent pattern are retained. Additional revision for Formlabs White Resin V5 at 0.10 mm layer height. V3 is retained unchanged. V4 uses removable, side-loaded hex nuts instead of the V3 glued inserts. Dimensions below are millimetres.
 
 ## Files
 
@@ -11,10 +11,11 @@ Updated 2026-11-15 with smooth structural fillets and a four-corner stretch vent
 - `dreamV4-print-meshes.zip`: nine individual printable STLs, including the coupon and logo.
 - `dreamV4-enclosure-preview.png`: views rendered from the actual CAD geometry.
 - `dreamV4-design-details.png`: column-root and cover nut-slot close-ups.
+- `dreamV4-bridge-details.png`: side and middle bridge-junction close-ups, including the middle-pillar nut slot.
 - `dreamV4-vent-pattern.png`: dimensioned view of the four-corner vent field.
 - `v4_support/`: dimensions, native FreeCAD generator, checks and reports.
 
-The base now contains 16 native, editable `Part::Fillet` features, followed by a `Part::Cut` for the nut seats, wash cavities and preserved slit. Expand the base object to inspect the fillet radii. The underlying stock and other components are BRep solids; the included Python generator reconstructs them from dimensions. This is not a fully constrained Sketcher feature tree. Existing `.form` print jobs belong to the earlier design and have not been updated for V4.
+The base now contains 19 native, editable `Part::Fillet` features, combined through a bridge-junction union and followed by a `Part::Cut` for the nut seats, wash cavities and preserved slit. Expand the base object to inspect the fillet radii. The underlying stock and other components are BRep solids; the included Python generator reconstructs them from dimensions. This is not a fully constrained Sketcher feature tree. Existing `.form` print jobs belong to the earlier design and have not been updated for V4.
 
 ## Hardware and fits
 
@@ -33,11 +34,13 @@ Load all nuts before fitting the electronics. The screw captures each nut after 
 
 - All nine PCB/sensor columns have a side-loading hex nut seat and a screw-only top clearance hole.
 - Broad native FreeCAD fillets blend the column roots into the base; smaller fillets round exposed rib rims and vertical edges. Most floor-root blends use R2.0, with R1.5 at the close paired mount. Rib edge rounds use R0.8. Functional nut flats, screw holes, seating faces and the Orange Pi slit retain their required geometry.
+- Bridge-to-pillar joints now have R1.5 fillets at the side pillar and R2.0 fillets around the middle shoulder and along both bridge-arm junctions. The middle node is widened from Ø16 to Ø20 to accommodate these blends; the bridge arms remain 12 mm wide ×7 mm deep. These are native Fillet features on isolated junction stock, fused into the existing base before the functional cuts.
+- The middle pillar explicitly retains its side-loading M3 nut pocket: 5.80 across flats ×2.70 high, starting 2.40 mm below the mounting face, with a Ø3.40 screw bore. Its side entrance points toward negative X (slightly toward negative Z), and is checked for continuous nut insertion.
 - PCB root lands now support the full foot down to the base plate. The adjacent front-left PCB/CozIR columns share one continuous flared foot, removing the crease between the previous overlapping cones.
 - Most nut pockets begin 2.4 mm below the mounting face. The close front-left CozIR pocket begins 6.3 mm below it, staggered relative to the adjacent PCB nut because their axes are only 5.18 mm apart. These two channels load from opposite Z directions.
 - Each column has an axial cavity extending **62% of its height**, with a solid cap, solid foot and two Ø2.6 wash/drain ports. Ordinary cavity diameter is 4.4 mm. The notched Orange Pi column uses a Ø3.6 cavity offset 1.2 mm away from the slit.
-- The central CozIR support at X−10/Z−0.48 now has **two 12 mm wide ×7 mm deep beams** anchored to the left and front base annulus, plus a tapered node reaching Ø16. Previously it relied on one 8 mm wide ×3.5 mm deep cantilever. Rounded beam ends and the wider node distribute the load. This is a structural improvement, not a tested drop/impact rating.
-- Its lower drain exits toward +Z so the reinforcing beam does not seal it. All 18 column wash paths were checked open to the exterior.
+- The central CozIR support at X−10/Z−0.48 now has **two 12 mm wide ×7 mm deep beams** anchored to the left and front base annulus, plus a tapered column joining the Ø20 middle node. Previously it relied on one 8 mm wide ×3.5 mm deep cantilever. Rounded beam ends and the wider node distribute the load. This is a structural improvement, not a tested drop/impact rating.
+- Its lower drain exits toward +Z so the reinforcing beam does not seal it; the path is extended to 12 mm through the widened middle node. All 18 column wash paths were checked open to the exterior.
 - The Orange Pi relief is preserved: rounded cut tool X20..35.2, **Y26.6..31.6 (5 mm high)**, Z29..45, edge radius0.7. Its position and width have not moved.
 - The base’s enclosure-closure screw heads use Ø6 counterbores; a 3 mm high M3 head sits approximately 0.2 mm below the outside surface.
 
@@ -65,12 +68,12 @@ Use the new V4 STLs in a new PreForm job. Orient and support parts so supports d
 - All nine STL files are watertight, without non-manifold edges or unmatched triangle edges.
 - All 17 actual nut envelopes and continuous insertion sweeps fit. Antirotation contact is present; nuts do not collide with each other, including the staggered pair.
 - M2 screw-head envelopes fit in the collar and clamp counterbores throughout the clamp’s travel. Cover, base, collar and clamp do not intersect.
-- All 715 Dream V3 electronics solids were checked. Conservative minimum enclosure side clearance remains **6.5069 mm**, meeting the 5 mm requirement.
+- The earlier complete fit check covers all 715 Dream V3 electronics solids. For this bridge update, the unchanged source stock was verified by SHA256 and the union feature graph was checked; both entire bridge-patch envelopes were then checked against all 718 retained electronics/accessory solids, with no new collisions. Conservative minimum enclosure side clearance remains **6.5069 mm**, meeting the 5 mm requirement.
 - The only electronics intersection is the existing 14.062 mm³ overlap of the old Orange Pi reference with the preserved slit column. The user previously confirmed the physical Orange Pi sits higher and explicitly requested this slit position. That reference has deliberately not been moved by an invented offset.
 - The source IPS `ips7101` solid has a pre-existing invalid geometry condition; its reference envelope is included, but the actual physical fit remains to be confirmed.
 - White V5 impact performance, nut pull-out strength and final cable fit require physical testing. The design does not imply a measured strength rating.
 - The FreeCAD desktop connection remained unreliable during this revision. Native FreeCAD Fillet/Part operations, file reopening and geometry checks are used; previews are rendered from the actual CAD triangles.
 
-The previous V4 is archived at `v4_support/superseded/V4-before-smooth-fillets-four-corner-vents.zip`.
+The previous V4 revisions are archived at `v4_support/superseded/V4-before-smooth-fillets-four-corner-vents.zip` and `v4_support/superseded/V4-before-bridge-joint-fillets.zip`.
 
 Detailed reports: `v4_support/generated/validation.json` and `fastener-validation.json`. No changes were made to the V3 deliverables.

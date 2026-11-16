@@ -67,7 +67,8 @@ def hollow(pt,axis,height,direction,label,notched=False):
  drains=[]
  for t in [start+2,start+length-2]:
   drain_u=V(0,0,1) if label=='M3 -10.0 -0.48' and t>start+3 else u
-  drains.append(cyl(1.3,9,pt+axis*t+offset,drain_u))
+  drain_length=12 if label=='M3 -10.0 -0.48' and t>start+3 else 9
+  drains.append(cyl(1.3,drain_length,pt+axis*t+offset,drain_u))
  hollow_records.append(dict(label=label,height=height,cavity_start=start,cavity_length=length,fraction=.62,radius=radius,offset=list(offset),drain_diameter=2.6,foot=height-start-length))
  return fuse([tube]+drains)
 
@@ -210,6 +211,8 @@ base=fuse(base_parts)
 base.exportBrep(os.path.join(OUT,'BaseBeforeFillets.brep'))
 from fillet_base import smooth_base
 base=smooth_base(base,OUT,say)
+from bridge_fillets import smooth_bridge_junctions
+base=smooth_bridge_junctions(base,OUT,say)
 # Clearance notch for the Orange Pi board edge at the rear-right PCB column.
 # Negative Y points up the column toward the PCB seating tip.
 # Original upper face was Y=32.6. New lower face is Y=31.6,

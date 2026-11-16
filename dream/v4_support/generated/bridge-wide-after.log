@@ -1,0 +1,5 @@
+{'index': 35, 'center': [-18.0, 40.4, -6.48], 'length': 6.200000000000003, 'concave': True, 'kinds': ['Cylinder', 'Plane'], 'angle': 53.13010235415597, 'ymin': 37.3, 'ymax': 43.5}
+{'index': 37, 'center': [-16.0, 40.4, -8.48], 'length': 6.200000000000003, 'concave': True, 'kinds': ['Cylinder', 'Plane'], 'angle': 53.130102354155994, 'ymin': 37.3, 'ymax': 43.5}
+{'index': 48, 'center': [-4.0, 40.4, -8.48], 'length': 6.200000000000003, 'concave': True, 'kinds': ['Cylinder', 'Plane'], 'angle': 53.13010235415599, 'ymin': 37.3, 'ymax': 43.5}
+{'index': 51, 'center': [-18.0, 40.4, 5.52], 'length': 6.200000000000003, 'concave': True, 'kinds': ['Cylinder', 'Plane'], 'angle': 53.130102354155994, 'ymin': 37.3, 'ymax': 43.5}
+{'index': 59, 'center': [-10.0, 28.5, -0.47999999999997617], 'length': 31.41592653589793, 'concave': True, 'kinds': ['Cone', 'Cylinder'], 'angle': 20.55604521958346, 'ymin': 28.5, 'ymax': 28.5}

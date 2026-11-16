@@ -1,0 +1,16 @@
+{
+  "method": "Conservative complete patch envelopes; unchanged source stock SHA256 and union feature graph verified",
+  "source_stock_sha256": "600a19d63cef549448da907d48c60300201b15721a28353fbf71f8503084d453",
+  "reference_parts_checked": 718,
+  "new_collisions": [],
+  "patch_volumes": [
+    5125.45568256924,
+    9411.579497252564
+  ],
+  "mating_patch_checks": {
+    "TopRevised": 0.0,
+    "USBRetainingCollar": 0,
+    "USBClamp": 0
+  },
+  "middle_nut_slot": "Checked separately by full nut insertion sweep"
+}

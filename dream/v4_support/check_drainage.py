@@ -13,8 +13,9 @@ for h in r['hollow_columns']:
  for i,t in enumerate([h['cavity_start']+2,h['cavity_start']+h['cavity_length']-2]):
   direction=V(0,0,1) if h['label']=='M3 -10.0 -0.48' and i==1 else u
   center=pt+axis*t+offset
-  path=Part.makeCylinder(1.2,9,center,direction)
-  outlet=Part.makeCylinder(1.2,.5,center+direction*8.9,direction)
+  length=12 if h['label']=='M3 -10.0 -0.48' and i==1 else 9
+  path=Part.makeCylinder(1.2,length,center,direction)
+  outlet=Part.makeCylinder(1.2,.5,center+direction*(length-.1),direction)
   a=s.common(path).Volume;b=s.common(outlet).Volume
   c=dict(label=h['label'],port=i,path_overlap=a,outlet_overlap=b)
   checks.append(c);assert a<.001 and b<.001,c

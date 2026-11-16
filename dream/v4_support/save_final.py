@@ -10,11 +10,16 @@ report=json.load(open(os.path.join(OUT,'validation.json')))
 fast=json.load(open(os.path.join(OUT,'fastener-validation.json')))
 clampcheck=json.load(open(os.path.join(OUT,'clamp-update-validation.json')))
 assert report['electronics_checked']==715
+if '--base-only' in sys.argv:
+ assert report['bridge_fit_validation']['reference_parts_checked']>=717
+ assert not report['bridge_fit_validation']['new_collisions']
 assert not report['retained_reference_collisions'],report['retained_reference_collisions']
 assert report['minimum_side_clearance_conservative']>=5
 assert all(v<.001 for v in report['pair_checks'].values())
 assert all(c.get('component')=='Part__Feature4149' and c.get('enclosure')=='BaseRevised' and 0<c.get('volume',0)<14.063 for c in report['collisions']),report['collisions']
 assert len(fast['nut_checks'])==17
+mid_nut=next(c for c in fast['nut_checks'] if c['label']=='M3 -10.0 -0.48')
+assert mid_nut['seated_overlap']<.001 and mid_nut['insertion_overlap']<.001 and mid_nut['rotation30_blocked_volume']>.01
 assert not clampcheck['electronics_collisions']
 report['shape_checks']['USBClamp']=clampcheck
 SOURCE=os.path.join(ROOT,'dreamV3-enclosure.FCStd')
@@ -35,9 +40,11 @@ for name,label in labels.items():
 fillet_report=json.load(open(os.path.join(OUT,'fillet-validation.json')))
 report['fillet_validation']=fillet_report
 report['parameters']=P
-report['small_corner_validation']=json.load(open(os.path.join(OUT,'small-corner-validation.json')))
-H=A.openDocument(os.path.join(OUT,'BaseFilletHistory.FCStd'))
-last=H.getObject(fillet_report['steps'][-1]['name'])
+report.pop('small_corner_validation',None) # Superseded by the current bridge checks.
+bridge_report=json.load(open(os.path.join(OUT,'bridge-fillet-validation.json')))
+report['bridge_fillet_validation']=bridge_report
+H=A.openDocument(os.path.join(OUT,'BridgeFilletHistory.FCStd'))
+last=H.getObject(bridge_report['final_feature'])
 copied=D.copyObject(last,True)
 history_names={o.Name for o in [copied]+copied.OutListRecursive}
 D.removeObject('BaseRevised');D.recompute()
@@ -47,7 +54,8 @@ D.Bottom.addObject(base);D.recompute()
 assert base.Shape.isValid() and len(base.Shape.Solids)==1
 expected=load('BaseRevised');assert abs(base.Shape.Volume-expected.Volume)<.001,(base.Shape.Volume,expected.Volume)
 history_names.add(tools.Name)
-meta(base,'FilletHistory','Expand this cut to edit the native structural Fillet features; functional hole tools are applied afterward.')
+meta(base,'FilletHistory','Expand this cut to edit the native structural and bridge Fillet features; functional hole tools are applied afterward.')
+meta(base,'MiddlePillarNutSlot','Side-loading M3 hex pocket: 5.80 mm across flats x2.70 mm high; screw bore3.40 mm; entry toward negative X.')
 A.closeDocument(H.Name)
 for g in [D.Top,D.Bottom]:
  for n in ['InsertInstallation','M3Insert','M2Insert','M3PocketDiameter','M3PocketDepth','M2PocketDiameter','M2PocketDepth','NotchedInsertPocket']:
@@ -61,8 +69,8 @@ meta(D.Top,'USBFit','Provisional 18 x 10 housing; 11 x 5.5 throat. Collar face Z
 meta(D.Top,'Vents','Four-corner deformation: circular 2.3 mm center holes, progressively elongated corner ellipses up to6.21 x1.90 mm; minimum ligament2.55 mm.')
 meta(D.Bottom,'PairedMount','Front-left PCB and CozIR nuts staggered: nut-pocket depths2.4 and6.3 mm; pockets load from opposite Z directions.')
 meta(D.Bottom,'HollowColumns','Nine posts hollow along62% of height. Two2.6mm cross-drains per post. Offset1.2mm cavity in notched post preserves Orange Pi notch wall.')
-meta(D.Bottom,'StructuralFillets','Native Part Fillet features: broad root blends and smaller rib-edge rounds. Supported PCB root lands and a continuous paired-mount flare.')
-meta(D.Bottom,'CozirReinforcement','Central mount has two12mm-wide x7mm-deep rounded beams, front and left annular anchorage, and a tapered16mm node.')
+meta(D.Bottom,'StructuralFillets','Native Part Fillet features: broad root blends and smaller rib-edge rounds. Supported PCB root lands, continuous paired-mount flare, R1.5 side bridge and R2 middle bridge junctions.')
+meta(D.Bottom,'CozirReinforcement','Central mount has two12mm-wide x7mm-deep rounded beams, front and left annular anchorage, and a20mm middle node with2mm bridge blends.')
 meta(D.Bottom,'OrangePiSlot','Unchanged from V3: rounded slit Y26.6..31.6, height5mm. Physical Orange Pi is higher than the stored reference, as confirmed by user.')
 meta(D.DreamV3,'FitCheck','715 components checked; only retained old Orange Pi reference overlap14.062mm^3. Minimum side clearance6.5069mm. Invalid source ips7101 remains a fit-check limitation.')
 D.recompute()
@@ -94,6 +102,8 @@ def patch_gui(path,names,camera=None):
 patch_gui(TARGET,{o.Name for o in D.Objects})
 standalone=[]
 for kind,names in [('Base',['BaseRevised','CozirSpacer1','CozirSpacer2','IPSSpacer']),('Top',['TopRevised','USBRetainingCollar','USBClamp','MintsIcon'])]:
+ if kind=='Top' and '--base-only' in sys.argv:
+  standalone.append(os.path.join(ROOT,'dreamV4-Top.FCStd'));continue
  S=A.newDocument('DreamV4'+kind);S.Label='DREAM V4 '+kind+' — captured nuts'
  for name in names:
   old=D.getObject(name)
@@ -107,7 +117,8 @@ for kind,names in [('Base',['BaseRevised','CozirSpacer1','CozirSpacer2','IPSSpac
  S.recompute();path=os.path.join(ROOT,'dreamV4-'+kind+'.FCStd');S.saveAs(path)
  patch_gui(path,{o.Name for o in S.Objects});standalone.append(path);A.closeDocument(S.Name)
 # Native coupon document for inspection as well as its printable STL.
-S=A.newDocument('DreamV4NutFitCoupon');o=S.addObject('Part::Feature','NutFitCoupon');o.Shape=load('NutFitCoupon');S.recompute();S.saveAs(os.path.join(ROOT,'dreamV4-NutFitCoupon.FCStd'));A.closeDocument(S.Name)
+if '--base-only' not in sys.argv:
+ S=A.newDocument('DreamV4NutFitCoupon');o=S.addObject('Part::Feature','NutFitCoupon');o.Shape=load('NutFitCoupon');S.recompute();S.saveAs(os.path.join(ROOT,'dreamV4-NutFitCoupon.FCStd'));A.closeDocument(S.Name)
 # Logo is unchanged; byte-identical printable mesh.
 shutil.copyfile(os.path.join(ROOT,'dreamV3-MintsIcon.stl'),os.path.join(ROOT,'dreamV4-MintsIcon.stl'))
 mesh_checks={}
@@ -130,6 +141,6 @@ for path in [TARGET]+standalone:
   o=Q.getObject(name)
   if o:assert o.Shape.isValid() and len(o.Shape.Solids)==1,(path,name)
  A.closeDocument(Q.Name)
-report.update(native_fillet_steps=fillet_report['steps'],final_file=TARGET,standalone_files=standalone,final_file_reopened=True,mesh_checks=mesh_checks,fastener_validation=fast,clamp_update_validation=clampcheck)
+report.update(native_fillet_steps=fillet_report['steps']+bridge_report['steps'],final_file=TARGET,standalone_files=standalone,final_file_reopened=True,mesh_checks=mesh_checks,fastener_validation=fast,clamp_update_validation=clampcheck)
 json.dump(report,open(os.path.join(OUT,'validation.json'),'w'),indent=2)
 print(json.dumps(dict(saved=TARGET,standalone=standalone,mesh_checks=mesh_checks),indent=2),flush=True)

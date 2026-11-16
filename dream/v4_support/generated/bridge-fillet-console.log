@@ -1,0 +1,25 @@
+Eligible structural edges: 142
+Bridge side-pillar upright junction 1: 1 edges
+  trying R1.5
+  trying R1.0
+  trying R0.6
+Bridge side-pillar upper junction 1: 1 edges
+  trying R1.0
+  trying R0.6
+  trying R0.35
+Bridge side-pillar upright junction -1: 1 edges
+  trying R1.5
+  trying R1.0
+  trying R0.6
+Bridge side-pillar upper junction -1: 1 edges
+  trying R1.0
+  trying R0.6
+  trying R0.35
+Bridge middle-pillar shoulder rounds: 2 edges
+  trying R1.5
+  trying R1.0
+  trying R0.6
+Bridge middle-pillar transition blends: 4 edges
+  trying R0.6
+  trying R0.35
+  trying R0.2

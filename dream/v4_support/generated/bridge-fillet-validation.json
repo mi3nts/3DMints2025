@@ -1,0 +1,55 @@
+{
+  "source_stamp": {
+    "volume": 123606.19267121557,
+    "area": 69171.84112771603,
+    "edges": 2919,
+    "policy": 1
+  },
+  "steps": [
+    {
+      "name": "BridgeJunctionFillet",
+      "label": "Bridge to side-pillar fillets",
+      "radius": 1.5,
+      "edges": [
+        8,
+        19,
+        30
+      ],
+      "count": 3
+    },
+    {
+      "name": "BridgeJunctionFillet001",
+      "label": "Middle pillar to bridge shoulder",
+      "radius": 2.0,
+      "edges": [
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "count": 5
+    },
+    {
+      "name": "BridgeJunctionFillet002",
+      "label": "Both bridge arms to middle node",
+      "radius": 2.0,
+      "edges": [
+        35,
+        37,
+        48,
+        51
+      ],
+      "count": 4
+    }
+  ],
+  "final_feature": "BridgeJointFusion",
+  "history": "/Users/rittikpatra/Documents/GitHub/3DMints2025/dream/v4_support/generated/BridgeFilletHistory.FCStd",
+  "middle_node_diameter": 20,
+  "side_radius": 1.5,
+  "middle_radius": 2.0,
+  "valid": true,
+  "closed": true,
+  "solids": 1,
+  "volume": 124057.39535590191
+}
